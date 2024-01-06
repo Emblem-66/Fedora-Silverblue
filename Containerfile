@@ -7,7 +7,7 @@ RUN rpm-ostree override remove gnome-shell-extension-apps-menu \
     gnome-shell-extension-background-logo \
     gnome-shell-extension-launch-new-instance \
     gnome-shell-extension-places-menu \
-    gnome-shell-extension-window-list \
+    gnome-shell-extension-window-list
 RUN rpm-ostree override remove toolbox
 
 # RPM-Fusion
