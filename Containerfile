@@ -1,15 +1,14 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 
 # Debloat
-RUN rpm-ostree override remove \
-    firefox firefox-langpacks \
-    yelp yelp-xsl yelp-libs gnome-tour \
-    gnome-shell-extension-apps-menu \
+RUN rpm-ostree override remove firefox firefox-langpacks 
+RUN rpm-ostree override remove yelp yelp-xsl yelp-libs gnome-tour
+RUN rpm-ostree override remove gnome-shell-extension-apps-menu \
     gnome-shell-extension-background-logo \
     gnome-shell-extension-launch-new-instance \
     gnome-shell-extension-places-menu \
     gnome-shell-extension-window-list \
-    toolbox
+RUN rpm-ostree override remove toolbox
 
 # RPM-Fusion
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
