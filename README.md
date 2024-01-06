@@ -1,5 +1,7 @@
 # fedora-ostree
-Custom Fedora Silverblue image
+[![build](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 
+Custom Fedora Silverblue image for my taste
 
-''rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-ostree:latest''
+`` rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-ostree:latest ``
+
