@@ -5,3 +5,7 @@ Custom Fedora Silverblue image for my taste
 
 `` rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-ostree:latest ``
 
+# ToDo
+- Cosign
+- Potential bug fixes
+- Maybe some services, etc.
