@@ -3,9 +3,9 @@
 
 Custom Fedora Silverblue image for my taste. Heavily customized.
 
-GNOME: `` rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-ostree:latest ``
+GNOME: `` rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest ``
 
-KDE: `` rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-ostree:latest ``
+KDE: `` rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest ``
 
 # ToDo
 - Cosign
