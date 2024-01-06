@@ -14,9 +14,7 @@ RUN rpm-ostree override remove toolbox
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Drivers
-RUN rpm-ostree override remove mesa-va-drivers --install mesa-va-drivers-freeworld
-RUN rpm-ostree override remove mesa-vdpau-drivers --install mesa-vdpau-drivers-freeworld
-# RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld
+RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld
 
 # FFmpeg & Codecs
 RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
@@ -38,4 +36,6 @@ RUN rpm-ostree install distrobox
 RUN rpm-ostree install libvirt virt-install virt-manager
 
 # Auto updates
-RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=check/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer
+RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
+RUN sed -i 's/#LockLayering.*/LockLayering=true/' /etc/rpm-ostreed.conf
+RUN systemctl enable rpm-ostreed-automatic.timer
