@@ -4,6 +4,8 @@
 [![build-kinoite](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg?event=schedule&job=build-kinoite)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 [![build-silverblue](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg?event=schedule&label=build-silverblue)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 [![build-kinoite](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg?event=schedule&job=build-kinoite&label=build-kinoite)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
+[![build-silverblue](https://img.shields.io/github/workflow/status/Emblem-66/fedora-ostree/build-silverblue?label=build-silverblue&style=for-the-badge)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
+[![build-kinoite](https://img.shields.io/github/workflow/status/Emblem-66/fedora-ostree/build-kinoite?label=build-kinoite&style=for-the-badge)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 
 Custom Fedora Silverblue/Kinoite image for my taste.
 Based on official Fedora Silverblue/Kinoite image, not uBLue.
