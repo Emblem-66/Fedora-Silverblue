@@ -23,12 +23,10 @@ RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extra
 # Packages
 RUN rpm-ostree install adw-gtk3-theme ffmpegthumbnailer \
     gnome-extensions-app \
-    gnome-shell-extension-blur-my-shell \
     gnome-shell-extension-caffeine \
-    gnome-shell-extension-dash-to-dock \
     gnome-shell-extension-gsconnect \
-    gnome-shell-extension-forge \
-    gnome-shell-extension-just-perfection
+    gnome-shell-extension-forge
+# gnome-shell-extension-just-perfection gnome-shell-extension-blur-my-shell gnome-shell-extension-dash-to-dock
 
 # Distrobox
 RUN rpm-ostree install distrobox
