@@ -22,7 +22,7 @@ KDE:
 - Virt-manager
 ### Silverblue
 - Removed
-  - extensions
+  - gnome extensions
   - gnome-help
   - gnome-tour
 - Added
