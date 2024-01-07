@@ -10,7 +10,11 @@ KDE:
 `` rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest ``
 
 # List of changes
-## x
+
+## List of changes
+
+### List of changes
+
 # ToDo
 - Cosign
 - Potential bug fixes
