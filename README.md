@@ -2,7 +2,7 @@
 [![build](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 
 Custom Fedora Silverblue/Kinoite image for my taste.
-Based on official Fedora Silverblue/Kinoite image, not uBLue.
+Based on official Fedora Silverblue/Kinoite image.
 
 GNOME: 
 
