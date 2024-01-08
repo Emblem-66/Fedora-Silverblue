@@ -6,12 +6,14 @@ Based on official Fedora Silverblue/Kinoite image.
 
 GNOME: 
 
-``` shell rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest ```
+``` shell
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
+```
 
 KDE: 
 
 ``` shell
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest 
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest
 ```
 
 ## List of changes
