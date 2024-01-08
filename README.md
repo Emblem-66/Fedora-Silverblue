@@ -36,6 +36,11 @@ KDE:
     - forge
     - just-perfection
 ### Kinoite
+Waiting for Fedora 40
+- Removed
+  - 
+- Added
+  - 
 # References
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
 - [Distrobox](https://github.com/89luca89/distrobox)
