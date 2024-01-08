@@ -37,8 +37,9 @@ KDE:
     - just-perfection
 ### Kinoite
 Waiting for Fedora 40
-
+Looking to slim down KDE - removing apps that are available on flathub (Ark, KWrite,...)
 # References
+- [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Inspiration: uBlue](https://github.com/ublue-os)
