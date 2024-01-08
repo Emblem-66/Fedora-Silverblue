@@ -15,7 +15,7 @@ KDE:
 ## List of changes
 ### Silverblue & Kinoite
 - RPM-Fusion enabled
-- Hardware codecs with AMD (mesa-freeworld)
+- Hardware codecs AMD (mesa-freeworld)
 - Software codecs
 - Removed Firefox
 - Distrobox instead of Toolbox
