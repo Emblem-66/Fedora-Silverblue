@@ -10,7 +10,9 @@ GNOME:
 
 KDE: 
 
-`` rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest ``
+``` shell
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest 
+```
 
 ## List of changes
 ### Silverblue & Kinoite
