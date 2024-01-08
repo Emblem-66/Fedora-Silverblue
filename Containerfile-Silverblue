@@ -27,7 +27,11 @@ RUN rpm-ostree install adw-gtk3-theme ffmpegthumbnailer \
     gnome-shell-extension-dash-to-dock \
     gnome-shell-extension-forge \
     gnome-shell-extension-gsconnect \
-    gnome-shell-extension-just-perfection
+    gnome-shell-extension-just-perfection \
+    gnome-shell-extension-unite \
+    gnome-shell-extension-pop-shell \
+    gnome-shell-extension-light-style \
+    gnome-shell-extension-dash-to-panel
 
 # Distrobox
 RUN rpm-ostree install distrobox
