@@ -38,9 +38,9 @@ KDE:
 ### Kinoite
 Waiting for Fedora 40
 - Removed
-  - 
+  - awf
 - Added
-  - 
+  - awf
 # References
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
 - [Distrobox](https://github.com/89luca89/distrobox)
