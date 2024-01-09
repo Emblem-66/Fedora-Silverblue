@@ -4,12 +4,13 @@
 Custom Fedora Silverblue/Kinoite image for my taste.
 Based on official Fedora Silverblue/Kinoite image.
 
-GNOME: 
+GNOME:
+
 ``` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
 ```
 
-KDE: 
+KDE:
 
 ``` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest
