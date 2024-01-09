@@ -6,9 +6,9 @@ Based on official Fedora Silverblue/Kinoite image.
 
 GNOME: 
 
-``` shell
+`` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
-```
+``
 
 KDE: 
 
@@ -18,6 +18,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:la
 
 ## List of changes
 ### Silverblue & Kinoite
+- Automatic updates - "stage"
 - RPM-Fusion enabled
 - Hardware codecs AMD (mesa-freeworld)
 - Software codecs
