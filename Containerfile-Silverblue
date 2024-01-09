@@ -15,7 +15,7 @@ RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-
 
 # Drivers
 #RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld
-RUN rpm-ostree instal mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
+RUN rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
 
 
 # FFmpeg & Codecs
