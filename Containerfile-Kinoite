@@ -2,7 +2,12 @@ FROM quay.io/fedora/fedora-kinoite:latest
 
 # Debloat
 RUN rpm-ostree override remove \
-    toolbox firefox firefox-langpacks 
+    toolbox firefox firefox-langpacks \
+    ark ark-libs \
+    kwrite kate-libs \
+    kwalletmanager5 pam-kwallet \
+    plasma-welcome
+
 
 # RPM-Fusion
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
