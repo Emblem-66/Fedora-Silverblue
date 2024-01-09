@@ -10,6 +10,8 @@ GNOME:
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
 ```
 
+**Note: KDE builds are disabled**
+
 KDE:
 
 ``` shell
