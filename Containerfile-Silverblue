@@ -41,8 +41,7 @@ RUN rpm-ostree install \
     jetbrains-mono-fonts-all \
     mozilla-fira-mono-fonts \
     intel-clear-sans-fonts \
-    intel-one-mono-fonts \
-    intelone-mono-font
+    intel-one-mono-fonts
 
 # Auto updates
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
