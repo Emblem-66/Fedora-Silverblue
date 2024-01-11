@@ -9,11 +9,6 @@ GNOME:
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
 ```
 
-KDE:
-``` shell
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest
-```
-
 **Note: KDE builds are disabled**
 
 ## List of changes
