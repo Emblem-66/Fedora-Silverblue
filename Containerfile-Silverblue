@@ -6,6 +6,7 @@ RUN rpm-ostree override remove \
     firefox firefox-langpacks \
     yelp yelp-xsl yelp-libs \
     gnome-tour \
+    gnome-extensions \
     gnome-shell-extension-apps-menu gnome-classic-session \
     gnome-shell-extension-background-logo \
     gnome-shell-extension-launch-new-instance \
@@ -28,21 +29,14 @@ RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extra
 RUN rpm-ostree install \
     distrobox \
     libvirt virt-install virt-manager \
-    adw-gtk3-theme yaru-theme \
-    gnome-tweaks \
+    adw-gtk3-theme \
     ffmpegthumbnailer \
     gnome-shell-extension-caffeine \
-    gnome-shell-extension-gsconnect nautilus-gsconnect \
+    gnome-shell-extension-gsconnect \
     gnome-shell-extension-appindicator \
     gnome-shell-extension-blur-my-shell \
     gnome-shell-extension-dash-to-dock \
-    podman-compose podman-plugins \
-    adobe-source-code-pro-fonts \
-    cascadia-fonts-all \
-    jetbrains-mono-fonts-all \
-    mozilla-fira-mono-fonts \
-    intel-clear-sans-fonts \
-    intel-one-mono-fonts
+    podman-compose podman-plugins
 
 # Auto updates
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
