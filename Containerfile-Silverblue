@@ -29,6 +29,7 @@ RUN rpm-ostree install \
     distrobox \
     libvirt virt-install virt-manager \
     adw-gtk3-theme yaru-theme \
+    gnome-tweaks \
     ffmpegthumbnailer \
     gnome-shell-extension-caffeine \
     gnome-shell-extension-gsconnect nautilus-gsconnect \
