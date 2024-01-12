@@ -2,9 +2,6 @@ FROM quay.io/fedora/fedora-kinoite:latest
 
 # Debloat
 RUN rpm-ostree override remove \
-    toolbox firefox firefox-langpacks \
-    ark ark-libs \
-    kwrite kate-libs \
     kwalletmanager5 pam-kwallet \
     plasma-welcome
 
@@ -16,7 +13,7 @@ RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freewor
 
 # FFmpeg & Codecs
 RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
-RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi
+RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-device
 
 # COPR
 # https://copr.fedorainfracloud.org/coprs/gloriouseggroll/nobara-39/
@@ -25,7 +22,7 @@ RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extra
 RUN rpm-ostree install steam
 
 # Packages
-# RUN rpm-ostree install ffmpegthumbnailer 
+# RUN rpm-ostree install ffmpegthumbnailer
 
 # Distrobox
 RUN rpm-ostree install distrobox
