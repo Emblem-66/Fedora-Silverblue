@@ -32,7 +32,8 @@ RUN rpm-ostree install \
     ffmpegthumbnailer \
     adw-gtk3-theme \
     gnome-shell-extension-caffeine \
-    gnome-shell-extension-gsconnect
+    gnome-shell-extension-gsconnect \
+    corectrl
 
 # Auto updates
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
