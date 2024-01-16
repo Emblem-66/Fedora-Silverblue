@@ -32,7 +32,7 @@ RUN rpm-ostree install \
     ffmpegthumbnailer \
     adw-gtk3-theme \
     gnome-shell-extension-caffeine \
-    gnome-shell-extension-gsconnect \
+    gnome-shell-extension-gsconnect nautilus-gsconnect \
     corectrl
 
 # Auto updates
