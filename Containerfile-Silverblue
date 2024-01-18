@@ -31,9 +31,7 @@ RUN rpm-ostree install \
     libvirt virt-install virt-manager \
     ffmpegthumbnailer \
     adw-gtk3-theme \
-    gnome-shell-extension-caffeine \
-    gnome-shell-extension-gsconnect nautilus-gsconnect \
-    corectrl
+    gnome-shell-extension-caffeine
 
 # Auto updates
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
