@@ -12,15 +12,12 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
 **Note: KDE builds are disabled**
 
 ## List of changes
-### Silverblue & Kinoite
+### Silverblue
 - Automatic updates - "stage"
 - RPM-Fusion enabled
-- ffmpeg
-- Removed Firefox
-- Distrobox instead of Toolbox
-- Virt-manager
-### Silverblue
 - Removed
+  - firefox
+  - toolbox
   - gnome extensions
   - gnome-help
   - gnome-tour
@@ -28,6 +25,8 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
   - adw-gtk3-theme
   - ffmpegthumbnailer
   - caffeine gnome extension 
+  - ffmpeg
+  - Virt-manager
 ### Kinoite
 Waiting for Fedora 40
 Looking to slim down KDE - removing apps that are available on flathub (Ark, KWrite,...)
