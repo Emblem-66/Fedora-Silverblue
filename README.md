@@ -15,7 +15,6 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
 ### Silverblue & Kinoite
 - Automatic updates - "stage"
 - RPM-Fusion enabled
-- Hardware codecs AMD (mesa-freeworld)
 - Software codecs
 - Removed Firefox
 - Distrobox instead of Toolbox
