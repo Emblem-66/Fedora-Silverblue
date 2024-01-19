@@ -1,18 +1,13 @@
 # fedora-ostree
 [![build](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 
-Custom Fedora Silverblue/Kinoite image for my taste.
-Based on official Fedora Silverblue/Kinoite image.
+Custom Fedora image based on official Fedora ostree image.
 
-GNOME:
+## Silverblue
 ``` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
 ```
-
-**Note: KDE builds are disabled**
-
-## List of changes
-### Silverblue
+### List of changes
 - Automatic updates - "stage"
 - RPM-Fusion enabled
 - Removed
@@ -27,7 +22,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
   - caffeine gnome extension 
   - ffmpeg
   - Virt-manager
-### Kinoite
+## Kinoite
 Waiting for Fedora 40
 Looking to slim down KDE - removing apps that are available on flathub (Ark, KWrite,...)
 # References
