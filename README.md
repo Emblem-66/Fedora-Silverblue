@@ -21,7 +21,8 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
   - ffmpeg
   - ffmpegthumbnailer
   - caffeine gnome extension
-  - diatrobox
+  - distrobox
+  - podman
   - virt-manager
 # References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
