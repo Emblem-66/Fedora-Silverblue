@@ -15,7 +15,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
 ### Silverblue & Kinoite
 - Automatic updates - "stage"
 - RPM-Fusion enabled
-- Software codecs
+- ffmpeg
 - Removed Firefox
 - Distrobox instead of Toolbox
 - Virt-manager
