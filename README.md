@@ -8,7 +8,7 @@ Custom Fedora image based on official Fedora ostree image.
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
 ```
 ### List of changes
-- Automatic updates - "stage"
+- Automatic updates
 - RPM-Fusion enabled
 - Removed
   - firefox
@@ -18,13 +18,11 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
   - gnome-tour
 - Added
   - adw-gtk3-theme
-  - ffmpegthumbnailer
-  - caffeine gnome extension 
   - ffmpeg
-  - Virt-manager
-## Kinoite
-Waiting for Fedora 40
-Looking to slim down KDE - removing apps that are available on flathub (Ark, KWrite,...)
+  - ffmpegthumbnailer
+  - caffeine gnome extension
+  - diatrobox
+  - virt-manager
 # References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
