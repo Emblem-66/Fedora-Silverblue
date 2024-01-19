@@ -28,13 +28,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
 - Added
   - adw-gtk3-theme
   - ffmpegthumbnailer
-  - gnome extensions
-    - blur-my-shell
-    - caffeine
-    - dash-to-dock
-    - gsconnect
-    - forge
-    - just-perfection
+  - caffeine gnome extension 
 ### Kinoite
 Waiting for Fedora 40
 Looking to slim down KDE - removing apps that are available on flathub (Ark, KWrite,...)
@@ -45,5 +39,3 @@ Looking to slim down KDE - removing apps that are available on flathub (Ark, KWr
 - [Inspiration: uBlue](https://github.com/ublue-os)
 # ToDo
 - Cosign
-- Potential bug and typo fixes
-- Maybe some more customisation
