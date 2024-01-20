@@ -27,6 +27,23 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
 
 ## SteamBlue
 RPMs instead of flatpaks. Just rebase and have everything.
+### List of changes
+- Automatic updates
+- RPM-Fusion enabled
+- Removed
+  - firefox
+  - toolbox
+- Added
+  - steam
+  - corectrl
+  - goverlay
+  - mesa-freeworld
+  - ffmpeg
+  - ffmpegthumbnailer
+  - distrobox
+  - podman
+  - virt-manager
+
 # References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
