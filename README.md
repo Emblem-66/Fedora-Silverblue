@@ -1,4 +1,4 @@
-# fedora-ostree
+# Fedora OSTree images
 [![build](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 
 Custom Fedora image based on official Fedora ostree image.
@@ -24,6 +24,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue
   - distrobox
   - podman
   - virt-manager
+SteamBlue - rpms instead of flatpaks. Just rebase and have everything.
 # References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
