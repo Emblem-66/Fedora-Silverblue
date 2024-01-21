@@ -26,7 +26,11 @@ RUN rpm-ostree install \
   corectrl
 
 # Packages
-# RUN rpm-ostree install ffmpegthumbnailer
+# RUN rpm-ostree install \
+    ffmpegthumbnailer \
+    haruna \
+    chromium \
+    kate
 
 # Distrobox
 RUN rpm-ostree install distrobox
