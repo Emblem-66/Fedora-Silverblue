@@ -33,5 +33,5 @@ Slimmed down Kinoite without crap like kwallet.
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Inspiration: uBlue](https://github.com/ublue-os)
 # Notes
-- Cosign - don't see a reason, not gonna bother
-- Licence - it's just bunch of lines in text files, not gonna bother
+- Cosign - don't see a reason, not gonna bother.
+- Licence - don't see a reason, not gonna bother.
