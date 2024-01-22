@@ -4,53 +4,34 @@
 [![build](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 
 
-Custom Fedora image based on official Fedora ostree image.
+Custom Fedora images based on official Fedora ostree images. 
+- Virt-manager added
+- FFmpeg added
+- Distrobox instead of Toolbox
 
 ## Silverblue
 ``` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
 ```
-### List of changes
-- Automatic updates
-- RPM-Fusion enabled
-- Removed
-  - firefox
-  - toolbox
-  - gnome extensions
-  - gnome-help
-  - gnome-tour
-- Added
-  - adw-gtk3-theme
-  - ffmpeg
-  - ffmpegthumbnailer
-  - caffeine gnome extension
-  - distrobox
-  - podman
-  - virt-manager
+Slimmed down Fedora Silverblue to be used with flatpaks.
 
 ## SteamBlue
-RPMs instead of flatpaks. Just rebase and have everything.
-### List of changes
-- Automatic updates
-- RPM-Fusion enabled
-- Removed
-  - firefox
-  - toolbox
-- Added
-  - steam
-  - corectrl
-  - goverlay
-  - mesa-freeworld
-  - ffmpeg
-  - ffmpegthumbnailer
-  - distrobox
-  - podman
-  - virt-manager
+``` shell
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-steamblue:latest
+```
+Fedora Silverblue with all the packages included.
+
+## Kinoite
+``` shell
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-kinoite:latest
+```
+Slimmed down Kinoite without crap like kwallet.
 
 # References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Inspiration: uBlue](https://github.com/ublue-os)
-# ToDo
-- Cosign
+# Notes
+- Cosign - don't see a reason, not gonna bother
+- Licence - it's just bunch of lines in text files, not gonna bother
