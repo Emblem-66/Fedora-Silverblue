@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-kinoite:latest
+FROM quay.io/fedora/fedora-silverblue:latest
 
 # Auto updates
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
@@ -13,8 +13,7 @@ RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freewor
 
 # Debloat
 RUN rpm-ostree override remove \
-    kwalletmanager5 pam-kwallet \
-    plasma-welcome
+    
 
 # COPR
 # https://copr.fedorainfracloud.org/coprs/gloriouseggroll/nobara-39/
@@ -28,15 +27,11 @@ RUN rpm-ostree install \
 # Packages
 # RUN rpm-ostree install \
     ffmpegthumbnailer \
-    haruna \
     chromium \
-    kate
+    celluloid
 
 # Distrobox
-RUN rpm-ostree install distrobox
-
-# Virt-manager
-RUN rpm-ostree install libvirt virt-install virt-manager
+RUN rpm-ostree install distrobox libvirt virt-install virt-manager
 
 # FFmpeg & Codecs
 RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
