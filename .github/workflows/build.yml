@@ -42,17 +42,17 @@ jobs:
       shell: bash
       run: podman push ghcr.io/emblem-66/fedora-steamblue:latest
 
-#  build-kinoite:
-#    runs-on: ubuntu-latest
-#    steps:
-#    - name: Checkout Push to Registry action
-#      uses: actions/checkout@v3
-#    - name: build
-#      shell: bash
-#      run: podman build -f Containerfile-Kinoite -t ghcr.io/emblem-66/fedora-kinoite:latest
-#    - name: login
-#      shell: bash
-#      run: podman login ghcr.io -u Emblem-66 -p ${{ secrets.GITHUB_TOKEN }}
-#    - name: push
-#      shell: bash
-#      run: podman push ghcr.io/emblem-66/fedora-kinoite:latest
+  build-kinoite:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Push to Registry action
+      uses: actions/checkout@v3
+    - name: build
+      shell: bash
+      run: podman build -f Containerfile-Kinoite -t ghcr.io/emblem-66/fedora-kinoite:latest
+    - name: login
+      shell: bash
+      run: podman login ghcr.io -u Emblem-66 -p ${{ secrets.GITHUB_TOKEN }}
+    - name: push
+      shell: bash
+      run: podman push ghcr.io/emblem-66/fedora-kinoite:latest
