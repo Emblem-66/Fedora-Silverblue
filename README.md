@@ -30,6 +30,7 @@ Slimmed down Kinoite without crap like kwallet.
 # References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
+- [Virt-Manager](https://virt-manager.org)
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Inspiration: uBlue](https://github.com/ublue-os)
 # Notes
