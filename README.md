@@ -1,8 +1,6 @@
 # Fedora OSTree images
 [![SilverBlue](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build-silverblue.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build-silverblue.yml)
 [![SteamBlue](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build-steamblue.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build-steamblue.yml)
-[![build](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
-
 
 Custom Fedora images based on official Fedora ostree images. 
 - Virt-manager added
