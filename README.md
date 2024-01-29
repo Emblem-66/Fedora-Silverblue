@@ -8,17 +8,17 @@ Custom Fedora images based on official Fedora ostree images.
 - FFmpeg added
 - Distrobox instead of Toolbox
 
-### Silverblue
+## Silverblue
 ``` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
 ```
 Slimmed down Fedora Silverblue to be used with flatpaks.
 
-## SteamBlue
+## Steamblue
 ``` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-steamblue:latest
 ```
-Fedora Silverblue with all the packages included.
+Fedora Silverblue with extra packages installed, like steam, corectrl, goverlay.
 
 ## Kinoite
 ``` shell
