@@ -8,7 +8,7 @@ Custom Fedora images based on official Fedora ostree images.
 - FFmpeg added
 - Distrobox instead of Toolbox
 
-## Silverblue
+### Silverblue
 ``` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
 ```
