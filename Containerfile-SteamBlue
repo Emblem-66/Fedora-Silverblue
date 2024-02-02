@@ -10,7 +10,7 @@ RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-
 
 # Drivers
 # ERROR: RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld    
-RUN rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld --allowerasing
+RUN rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld #--allowerasing
 
 # COPR
 
