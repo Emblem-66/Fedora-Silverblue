@@ -30,5 +30,4 @@ RUN rpm-ostree install \
     gnome-shell-extension-caffeine
 
 # FFmpeg
-# RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
-RUN rpm-ostree install ffmpeg --allowerasing
+RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
