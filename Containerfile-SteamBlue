@@ -37,10 +37,9 @@ RUN rpm-ostree install \
     libvirt virt-install virt-manager \
     ffmpegthumbnailer \
     adw-gtk3-theme \
-    gnome-shell-extension-caffeine \
-    chromium \
-    celluloid
+    gnome-shell-extension-caffeine 
 
 # Steam
-RUN rpm-ostree install steam goverlay corectrl
-
+RUN rpm-ostree install steam goverlay corectrl \
+    chromium \
+    celluloid
