@@ -1,8 +1,6 @@
 FROM quay.io/fedora/fedora-silverblue:latest AS builder
 # Auto Updates
-RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf &&\
-    sed -i 's/#LockLayering.*/LockLayering=true/' /etc/rpm-ostreed.conf &&\
-    systemctl enable rpm-ostreed-automatic.timer
+RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer
 
 # RPM-Fusion
 RUN rpm-ostree install \
