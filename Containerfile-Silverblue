@@ -1,4 +1,4 @@
-FROM Containerfile-master
+FROM ./Containerfile-master
 
 # REMOVE FIREFOX
 RUN rpm-ostree override remove firefox firefox-langpacks
