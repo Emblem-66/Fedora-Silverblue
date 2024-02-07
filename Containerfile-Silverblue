@@ -1,4 +1,4 @@
-FROM base
+FROM base AS silverblue
 
 # REMOVE FIREFOX
 RUN rpm-ostree override remove firefox firefox-langpacks
