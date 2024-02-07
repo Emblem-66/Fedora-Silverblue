@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-silverblue:latest
+FROM quay.io/fedora/fedora-silverblue:latest AS base
 
 # Auto Updates
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf &&\
