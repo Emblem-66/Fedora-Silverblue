@@ -1,6 +1,4 @@
 # Fedora OSTree images
-[![Silverblue](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build-silverblue.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build-silverblue.yml)
-[![Steamblue](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build-steamblue.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build-steamblue.yml)
 [![Builds](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 
 Custom Fedora images based on official Fedora ostree images. 
@@ -10,13 +8,13 @@ Custom Fedora images based on official Fedora ostree images.
 
 ## Silverblue
 ``` shell
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-silverblue:latest
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ```
 Slimmed down Fedora Silverblue to be used with flatpaks.
 
 ## Steamblue
 ``` shell
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/fedora-steamblue:latest
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/steamblue:latest
 ```
 Fedora Silverblue with extra packages installed, like steam, corectrl, goverlay.
 
