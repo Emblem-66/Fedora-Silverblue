@@ -7,9 +7,9 @@ Custom Fedora images based on official Fedora ostree images.
 - Distrobox instead of Toolbox
 
 ### Silverblue 
-``` shell
+``
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
-```
+``
 Slimmed down Fedora Silverblue to be used with flatpaks.
 
 ## Steamblue
