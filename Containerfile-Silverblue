@@ -34,5 +34,3 @@ RUN rpm-ostree install \
 
 # FFmpeg
 RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
-# REMOVE FIREFOX
-RUN rpm-ostree override remove 
