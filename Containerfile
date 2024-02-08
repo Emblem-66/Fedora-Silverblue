@@ -11,12 +11,15 @@ RUN rpm-ostree install distrobox podman-compose podman-plugins libvirt virt-inst
 # FFmpeg
 RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
 
+FROM base AS base1
+FROM base AS base2
+
 # Silverblue
-FROM base AS silverblue
+FROM base1 AS silverblue
 RUN rpm-ostree override remove firefox firefox-langpacks
 
 # SteamBlue
-FROM base AS steamblue
+FROM base2 AS steamblue
 # Drivers
 # ERROR: RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld    
 # ERROR: RUN rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld #--allowerasing
