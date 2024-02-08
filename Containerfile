@@ -37,7 +37,7 @@ FROM base AS steamblue
 # Codecs
 # RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-devices
 # COPR
-# make folder and copy /etc/yum.repos.d/ to the image
+# COPY etc/yum.repos.d/ /etc/yum.repos.d/
 # heroic, 
 # PROGRAMS
 RUN rpm-ostree install \
