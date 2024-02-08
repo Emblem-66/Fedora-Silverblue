@@ -27,10 +27,3 @@ Fedora Silverblue with programs.
 # Notes
 - Cosign - don't see a reason, not gonna bother.
 - Licence - don't see a reason, not gonna bother.
-
-| Column 1 Header | Column 2 Header | Column 3 Header |
-|-----------------|-----------------|-----------------|
-| Row 1, Col 1    | Row 1, Col 2    | Row 1, Col 3    |
-| ``rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest``    | Row 2, Col 2    | Row 2, Col 3    |
-
-``rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest``
