@@ -8,13 +8,14 @@ Custom Fedora ostree images.
 
 ## Silverblue 
 ``` shell
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
+rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ```
 Slimmed down Fedora Silverblue to be used with flatpaks.
 
 ## Steamblue
 ``` shell
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/steamblue:latest ```
+rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/steamblue:latest
+```
 Fedora Silverblue with programs.
 
 # References
@@ -26,9 +27,3 @@ Fedora Silverblue with programs.
 # Notes
 - Cosign - don't see a reason, not gonna bother.
 - Licence - don't see a reason, not gonna bother.
-
-
-| Header 1    | Header 2    | Header 3    |
-|-------------|-------------|-------------|
-| `copyable`  | `copyable`  | `copyable`  |
-| `copyable`  | `copyable`  | `copyable`  |
