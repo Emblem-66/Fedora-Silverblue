@@ -14,7 +14,7 @@ Slimmed down Fedora Silverblue to be used with flatpaks.
 
 ## Steamblue
 ``` shell
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/steamblue:latest```
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/steamblue:latest ```
 Fedora Silverblue with programs.
 
 # References
