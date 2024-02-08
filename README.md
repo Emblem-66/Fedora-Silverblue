@@ -29,9 +29,11 @@ Fedora Silverblue with programs.
 - Licence - don't see a reason, not gonna bother.
 
 
+| |
+|---|---|
+| Silverblue | Steamblue |
+|---|---|
 |  |  |
-|-----------------|-----------------|
-| | |
-| | |
-| | |
-| | |
+|  |  |
+|  |  |
+|  |  |
