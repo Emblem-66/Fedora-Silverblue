@@ -25,6 +25,6 @@ Fedora Silverblue with app the programs.
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Inspiration: uBlue](https://github.com/ublue-os)
 # Notes
-- Updates - Based on latest version of Fedora, should be automatic.
+- Updates - Based on latest major version of Fedora, should be automatic.
 - Cosign - don't see a reason, not gonna bother.
 - Licence - don't see a reason, not gonna bother.
