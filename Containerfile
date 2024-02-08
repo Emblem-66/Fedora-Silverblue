@@ -35,15 +35,12 @@ RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /u
 
 # SteamBlue
 FROM base AS steamblue
-# Drivers
-RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld    
-# ERROR: RUN rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld #--allowerasing
-# COPR
 # Codecs
-RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-devices
+# RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-devices
 # PROGRAMS
 RUN rpm-ostree install \
     steam goverlay corectrl \
-    file-roller loupe celluloid
+    file-roller \
+    loupe celluloid
 # CLEANUP
 RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /usr/share/doc/* /usr/share/man/*
