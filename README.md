@@ -29,9 +29,9 @@ Fedora Silverblue with programs.
 - Licence - don't see a reason, not gonna bother.
 
 
-| Column 1 Header | Column 2 Header |
-|-----------------|-----------------||
+|  |  |
+|-----------------|-----------------|
 | Row 1, Col 1    | Row 1, Col 2    | 
 | Row 2, Col 1    | Row 2, Col 2    |
-| Row 1, Col 1    | Row 1, Col 2    |
-| Row 2, Col 1    | Row 2, Col 2    |
+| Row 3, Col 1    | Row 3, Col 2    |
+| Row , Col 1    | Row 4, Col 2    |
