@@ -28,3 +28,6 @@ FROM base2 AS steamblue
 RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-devices
 # PROGRAMS
 RUN rpm-ostree install steam goverlay corectrl file-roller loupe celluloid
+
+# CLEANUP
+RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /usr/share/doc/* /usr/share/man/*
