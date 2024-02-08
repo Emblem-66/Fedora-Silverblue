@@ -1,7 +1,7 @@
 # Fedora OSTree Images
 [![Builds](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/fedora-ostree/actions/workflows/build.yml)
 
-Custom Fedora images based on official Fedora ostree images. 
+Custom Fedora ostree images.
 - Virt-manager added
 - FFmpeg added
 - Distrobox instead of Toolbox
@@ -25,6 +25,5 @@ Fedora Silverblue with programs.
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Inspiration: uBlue](https://github.com/ublue-os)
 # Notes
-- Based on latest major version of Fedora, should be automatic.
 - Cosign - don't see a reason, not gonna bother.
 - Licence - don't see a reason, not gonna bother.
