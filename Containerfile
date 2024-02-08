@@ -24,13 +24,13 @@ RUN rpm-ostree install \
     && \
     rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
 # CLEANUP
-RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /usr/share/doc/* /usr/share/man/*
+RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
 
 # Silverblue
 FROM base AS silverblue
 RUN rpm-ostree override remove firefox firefox-langpacks
 # CLEANUP
-RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /usr/share/doc/* /usr/share/man/*
+RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
 
 # SteamBlue
 FROM base AS steamblue
@@ -45,4 +45,4 @@ RUN rpm-ostree install \
     file-roller \
     loupe celluloid
 # CLEANUP
-RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /usr/share/doc/* /usr/share/man/*
+RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
