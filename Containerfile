@@ -43,6 +43,7 @@ FROM base AS steamblue
 RUN rpm-ostree install \
     steam goverlay corectrl \
     file-roller \
-    loupe celluloid
+    loupe celluloid gnome-text-editor \
+    transmission
 # CLEANUP
 RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
