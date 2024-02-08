@@ -25,7 +25,7 @@ gnome-shell-extension-launch-new-instance \
 gnome-shell-extension-places-menu \
 gnome-shell-extension-window-list \
 && \
-rpm-ostree install ffmpeg --force-replacefiles
+rpm-ostree install ffmpeg --allow-replacement
 
 # Silverblue
 FROM base AS silverblue
