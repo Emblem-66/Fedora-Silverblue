@@ -4,7 +4,6 @@ FROM quay.io/fedora/fedora-silverblue:latest AS base
 # RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer
 # RPM-Fusion
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && rpm-ostree install rpmfusion-free-release rpmfusion-nonfree-release
-
 # BASE PACKAGES & DEBLOAT & FFmpeg
 RUN rpm-ostree install \
     distrobox \
@@ -25,6 +24,8 @@ RUN rpm-ostree install \
     gnome-shell-extension-window-list \
     && \
     rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
+# CLEANUP
+RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /usr/share/doc/* /usr/share/man/*
 
 # Silverblue
 FROM base AS silverblue
@@ -35,7 +36,7 @@ RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /u
 # SteamBlue
 FROM base AS steamblue
 # Drivers
-RUN rpm-ostree override remove mesa-va-drivers mesa-vdpau-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld    
+RUN rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld    
 # ERROR: RUN rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld #--allowerasing
 # COPR
 # Codecs
