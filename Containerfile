@@ -37,6 +37,9 @@ RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /u
 FROM base AS steamblue
 # Codecs
 # RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-devices
+# COPR
+# make folder and copy /etc/yum.repos.d/ to the image
+# heroic, 
 # PROGRAMS
 RUN rpm-ostree install \
     steam goverlay corectrl \
