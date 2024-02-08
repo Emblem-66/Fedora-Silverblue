@@ -28,8 +28,14 @@ Fedora Silverblue with programs.
 - Cosign - don't see a reason, not gonna bother.
 - Licence - don't see a reason, not gonna bother.
 
-|  |  |  |
-|--|--|--|
-|  |  'text' |  |
-|  |  |  |
+If you want to indicate that a table cell contains code or text that users can copy, you can use backticks (\`) to enclose the content within the cell. This is a common convention to denote code or text that can be copied. Here's an example:
+
+```markdown
+| Header 1    | Header 2    | Header 3    |
+|-------------|-------------|-------------|
+| `copyable`  | `copyable`  | `copyable`  |
+| `copyable`  | `copyable`  | `copyable`  |
+```
+
+By enclosing the content in backticks, you're indicating to users that they can copy the text/code within those cells. This is a simple and effective way to achieve the "copy" flag within a table in Markdown.
 
