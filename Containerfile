@@ -14,6 +14,8 @@ RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free
 # Silverblue
 FROM base AS silverblue
 RUN rpm-ostree override remove firefox firefox-langpacks
+# CLEANUP
+RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /usr/share/doc/* /usr/share/man/*
 
 # SteamBlue
 FROM base AS steamblue
@@ -25,6 +27,5 @@ FROM base AS steamblue
 RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-devices
 # PROGRAMS
 RUN rpm-ostree install steam goverlay corectrl file-roller loupe celluloid
-
 # CLEANUP
 RUN rpm-ostree cleanup -m && rm -rf /var/log/* /var/cache/* /var/tmp/* /tmp/* /usr/share/doc/* /usr/share/man/*
