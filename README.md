@@ -27,3 +27,9 @@ Fedora Silverblue with programs.
 # Notes
 - Cosign - don't see a reason, not gonna bother.
 - Licence - don't see a reason, not gonna bother.
+
+|  |  |  |
+|--|--|--|
+|  |  'text' |  |
+|  |  |  |
+
