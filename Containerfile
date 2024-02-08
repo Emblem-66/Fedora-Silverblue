@@ -1,9 +1,9 @@
 # BASE
 FROM quay.io/fedora/fedora-silverblue:latest AS base
-# AUTO UPDATES
-# RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer
-# RPM-Fusion
-RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && rpm-ostree install rpmfusion-free-release rpmfusion-nonfree-release
+# AUTO UPDATES & RPM-Fusion
+RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer && \
+    rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
+# && rpm-ostree install rpmfusion-free-release rpmfusion-nonfree-release
 # BASE PACKAGES & DEBLOAT & FFmpeg
 RUN rpm-ostree install \
     distrobox \
