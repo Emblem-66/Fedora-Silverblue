@@ -1,4 +1,4 @@
-# BASE
+### BASE
 FROM quay.io/fedora/fedora-silverblue:latest AS base
 # AUTO UPDATES
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer
@@ -23,17 +23,17 @@ RUN rpm-ostree install \
     gnome-shell-extension-window-list \
     && \
     rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
-# CLEANUP
-RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
+### BASE
 
-# SILVERBLUE
+### SILVERBLUE
 FROM base AS silverblue
 # REMOVE FIREFOX
 RUN rpm-ostree override remove firefox firefox-langpacks
 # CLEANUP
 RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
+### SILVERBLUE
 
-# STEAMBLUE
+### STEAMBLUE
 FROM base AS steamblue
 # Codecs
 # RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-devices
@@ -41,10 +41,9 @@ FROM base AS steamblue
 # COPY etc/yum.repos.d/ /etc/yum.repos.d/
 # heroic, 
 # PROGRAMS
-RUN rpm-ostree install \
-    steam goverlay corectrl \
-    file-roller \
-    loupe celluloid gnome-text-editor \
-    transmission
+RUN rpm-ostree install steam goverlay corectrl && \
+    rpm-ostree install file-roller loupe celluloid gnome-text-editor transmission
 # CLEANUP
 RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
+### STEAMBLUE
+
