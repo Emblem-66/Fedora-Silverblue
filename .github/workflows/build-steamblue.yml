@@ -1,0 +1,19 @@
+name: SteamBlue
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 15 * * *'
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+    - name: Login to GitHub Container Registry
+      run: podman login ghcr.io -u emblem-66 -p ${{ secrets.GITHUB_TOKEN }}
+    - name: Build Steamblue Image
+      run: podman build -f Containerfile -t ghcr.io/emblem-66/steamblue:latest --target steamblue
+    - name: Push Steamblue Image
+      run: podman push ghcr.io/emblem-66/steamblue:latest
