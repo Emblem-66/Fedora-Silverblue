@@ -7,7 +7,7 @@ RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-
 # BASE PACKAGES & DEBLOAT & FFmpeg
 RUN rpm-ostree install \
     distrobox \
-    libvirt virt-manager \
+    libvirt virt-manager virt-install \
     ffmpegthumbnailer \
     adw-gtk3-theme \
     gnome-shell-extension-caffeine \
@@ -41,7 +41,7 @@ FROM base AS steamblue
 # COPY etc/yum.repos.d/ /etc/yum.repos.d/
 # heroic, 
 # PROGRAMS
-RUN rpm-ostree install steam goverlay corectrl && \
+# RUN rpm-ostree install steam goverlay corectrl && \
     rpm-ostree install file-roller loupe celluloid gnome-text-editor transmission
 # CLEANUP
 RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
