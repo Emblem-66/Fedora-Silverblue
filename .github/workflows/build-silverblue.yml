@@ -1,4 +1,4 @@
-name: Builds
+name: Silverblue
 on:
   push:
     branches:
