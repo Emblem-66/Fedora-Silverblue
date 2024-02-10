@@ -13,7 +13,7 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 ```
 Slimmed down Fedora Silverblue to be used with flatpaks.
 
-## Steamblue
+## SteamBlue
 ``` shell
 rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/steamblue:latest
 ```
