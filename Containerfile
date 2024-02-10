@@ -41,7 +41,7 @@ FROM base AS steamblue
 # COPY etc/yum.repos.d/ /etc/yum.repos.d/
 # heroic, 
 # PROGRAMS
-# RUN rpm-ostree install steam goverlay corectrl && rpm-ostree install file-roller loupe celluloid gnome-text-editor transmission
+RUN rpm-ostree install steam goverlay corectrl && rpm-ostree install file-roller loupe celluloid gnome-text-editor transmission
 # CLEANUP
 RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
 #-------------------- STEAMBLUE --------------------#
