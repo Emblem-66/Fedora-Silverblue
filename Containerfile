@@ -13,6 +13,7 @@ RUN rpm-ostree install \
     gnome-shell-extension-caffeine \
     && \
     rpm-ostree override remove \
+    firefox firefox-langpacks \
     toolbox \
     yelp yelp-xsl yelp-libs \
     gnome-tour \
@@ -23,26 +24,5 @@ RUN rpm-ostree install \
     gnome-shell-extension-window-list \
     && \
     rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
-#-------------------- BASE --------------------#
-
-#-------------------- SILVERBLUE --------------------#
-FROM base AS silverblue
-# REMOVE FIREFOX
-RUN rpm-ostree override remove firefox firefox-langpacks
 # CLEANUP
 RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
-#-------------------- SILVERBLUE --------------------#
-
-#-------------------- STEAMBLUE --------------------#
-FROM base AS steamblue
-# Codecs
-# RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi steam-devices
-# COPR
-# COPY etc/yum.repos.d/ /etc/yum.repos.d/
-# heroic, 
-# PROGRAMS
-RUN rpm-ostree install steam goverlay corectrl && rpm-ostree install file-roller loupe celluloid gnome-text-editor transmission
-# CLEANUP
-RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
-#-------------------- STEAMBLUE --------------------#
-
