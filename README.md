@@ -1,23 +1,14 @@
-# Fedora OSTree Images
-[![Silverblue](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build-silverblue.yml/badge.svg)](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build-silverblue.yml)
-[![SteamBlue](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build-steamblue.yml/badge.svg)](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build-steamblue.yml)
+# Silverblue
+[![Silverblue](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build.yml)
 
-Custom Fedora ostree images.
+Custom Fedora ostree image.
 - Virt-manager added
 - FFmpeg added
-- Distrobox instead of Toolbox
+- Distrobox added
 
-## Silverblue 
 ``` shell
 rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ```
-Slimmed down Fedora Silverblue to be used with flatpaks.
-
-## SteamBlue
-``` shell
-rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/steamblue:latest
-```
-Fedora Silverblue with programs.
 
 # References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
