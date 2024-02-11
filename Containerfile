@@ -1,4 +1,3 @@
-#-------------------- BASE --------------------#
 FROM quay.io/fedora/fedora-silverblue:latest AS base
 # AUTO UPDATES
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer
@@ -7,7 +6,7 @@ RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-
 # BASE PACKAGES & DEBLOAT & FFmpeg
 RUN rpm-ostree install \
     distrobox \
-    libvirt virt-manager virt-install \
+    libvirt virt-manager \
     ffmpegthumbnailer \
     adw-gtk3-theme \
     gnome-shell-extension-caffeine \
