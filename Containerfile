@@ -21,7 +21,6 @@ RUN rpm-ostree install \
     gnome-shell-extension-launch-new-instance \
     gnome-shell-extension-places-menu \
     gnome-shell-extension-window-list \
-    gnome-flashback \
     && \
     rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
 # CLEANUP
