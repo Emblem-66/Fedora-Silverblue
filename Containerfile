@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-silverblue:latest AS base
+FROM quay.io/fedora/fedora-silverblue:latest
 # AUTO UPDATES
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer
 # RPM-Fusion
