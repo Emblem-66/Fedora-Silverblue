@@ -1,7 +1,7 @@
 # Silverblue
 [![Silverblue](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build.yml)
 
-Custom Fedora ostree image.
+Custom Fedora Silverblue image.
 
 ``` shell
 rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
