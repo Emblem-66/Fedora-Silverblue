@@ -6,6 +6,7 @@ Custom Fedora Silverblue image.
 ``` shell
 rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ```
+``rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest``
 
 ## References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
