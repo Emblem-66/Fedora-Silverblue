@@ -1,6 +1,7 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 # AUTO UPDATES
-RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer
+COPY /etc/systemd/system/ /etc/systemd/system/
+RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && systemctl enable rpm-ostreed-automatic.timer && systemctl enable flatpak-autoupdate.service
 # RPM-Fusion
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
 # BASE PACKAGES & DEBLOAT & FFmpeg
