@@ -3,7 +3,5 @@ Description=Update Flatpaks
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/flatpak update -y
-Restart=always
-RestartSec=6h
 [Install]
 WantedBy=default.target
