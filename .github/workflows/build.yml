@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@main
     - name: Login to GitHub Container Registry
       run: podman login ghcr.io -u emblem-66 -p ${{ secrets.GITHUB_TOKEN }}
     - name: Build Silverblue Image
