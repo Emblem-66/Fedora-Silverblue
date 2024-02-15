@@ -1,11 +1,9 @@
 [Unit]
-Description=Flatpak Autoupdate Service
-
+Description=Update Flatpaks
 [Service]
-Type=simple
+Type=oneshot
 ExecStart=/usr/bin/flatpak update -y
 Restart=always
 RestartSec=6h
-
 [Install]
 WantedBy=default.target
