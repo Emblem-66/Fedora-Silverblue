@@ -18,6 +18,7 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 - [Virt-Manager](https://virt-manager.org)
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Flathub](https://flathub.org)
+- [FFmpeg](https://ffmpeg.org)
 - [Inspiration: uBlue](https://github.com/ublue-os)
 ### Notes
 - Cosign - don't see a reason, not gonna bother.
