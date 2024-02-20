@@ -13,7 +13,7 @@ RUN rpm-ostree install \
     libvirt virt-manager \
     ffmpegthumbnailer \
     adw-gtk3-theme \
-    redhat-display-fonts redhat-text-fonts \
+    redhat-display-fonts redhat-text-fonts terminus-fonts terminus-fonts-console mozilla-fira-fonts-common mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts-common mozilla-zilla-slab-highlight-fonts \
     gnome-shell-extension-caffeine \
     && \
     rpm-ostree override remove \
