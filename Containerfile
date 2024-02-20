@@ -1,6 +1,6 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 # REPOS & UPDATES
-COPY /etc/systemd/system/ /etc/systemd/system/
+COPY /rootfs/ /
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
     systemctl enable rpm-ostreed-automatic.timer && \
     systemctl enable flatpak-update.service && \
