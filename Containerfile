@@ -13,9 +13,14 @@ RUN rpm-ostree install \
     libvirt virt-manager \
     ffmpegthumbnailer \
     adw-gtk3-theme \
-    redhat-display-fonts redhat-text-fonts terminus-fonts terminus-fonts-console jetbrains-mono-fonts fira-code-fonts adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts intel-clear-sans-fonts intel-one-mono-fonts ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts mozilla-fira-fonts-common mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts-common mozilla-zilla-slab-highlight-fonts \
     gnome-shell-extension-caffeine \
     gnome-tweaks \
+    redhat-display-fonts redhat-text-fonts \
+    jetbrains-mono-fonts \
+    mozilla-fira-fonts fira-code-fonts mozilla-zilla-slab-fonts \
+    adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
+    intel-clear-sans-fonts intel-one-mono-fonts \
+    ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
     && \
     rpm-ostree override remove \
     firefox firefox-langpacks \
