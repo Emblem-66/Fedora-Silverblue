@@ -24,7 +24,7 @@ RUN rpm-ostree install \
     intel-clear-sans-fonts intel-one-mono-fonts \
     ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
     && \
-    fc-cache -f /usr/share/fonts 
+    fc-cache -f /usr/share/fonts \
     && \
     rpm-ostree override remove \
     firefox firefox-langpacks \
