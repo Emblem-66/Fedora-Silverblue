@@ -18,7 +18,7 @@ RUN rpm-ostree install \
     gnome-tweaks \
     redhat-display-fonts redhat-text-fonts \
     jetbrains-mono-fonts \
-    mozilla-fira-fonts fira-code-fonts mozilla-zilla-slab-fonts \
+    fira-code-fonts mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts \
     adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
     intel-clear-sans-fonts intel-one-mono-fonts \
     ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
