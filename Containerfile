@@ -16,15 +16,15 @@ RUN rpm-ostree install \
     adw-gtk3-theme \
     gnome-shell-extension-caffeine \
     gnome-tweaks \
+    ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
     redhat-display-fonts redhat-text-fonts \
     lato-fonts \
     jetbrains-mono-fonts \
     fira-code-fonts mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts \
     adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
     intel-clear-sans-fonts intel-one-mono-fonts \
-    ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
     && \
-    fc-cache -f /usr/share/fonts \
+    ln -s /usr/share/fonts /usr/local/share/fonts && fc-cache \
     && \
     rpm-ostree override remove \
     firefox firefox-langpacks \
