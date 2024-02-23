@@ -9,10 +9,10 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 ### Features
 - [x] automatic updates
 - [x] virt-manager
-- distrobox
-- ffmpeg
-- flathub
-- adw-gtk3-theme
+- [x] distrobox
+- [x] ffmpeg
+- [x] flathub
+- [x] adw-gtk3-theme
 - [ ] fonts working with flatpak
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
