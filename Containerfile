@@ -13,7 +13,7 @@ RUN rpm-ostree install \
     distrobox \
     libvirt virt-manager \
     ffmpegthumbnailer \
-    imagemagick \
+    ImageMagick \
     adw-gtk3-theme \
     gnome-shell-extension-caffeine \
     gnome-tweaks \
