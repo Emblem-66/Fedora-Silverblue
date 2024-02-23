@@ -13,6 +13,7 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 - ffmpeg
 - flathub
 - adw-gtk3-theme
+- fonts working with flatpak
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
