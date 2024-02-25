@@ -159,3 +159,11 @@ set_fonts
 install_firefox
 gaming_setup
 install_packages
+
+
+RUN rpm-ostree install jetbrains-mono-fonts \
+    && \
+    ln -s /usr/share/fonts/ /var/usrlocal/share \
+    && \
+    mkdir -p /usr/local/share && ln -s /usr/share/fonts /usr/local/share && fc-cache
+RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
