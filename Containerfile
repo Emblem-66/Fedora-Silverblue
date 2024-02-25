@@ -26,6 +26,8 @@ RUN rpm-ostree install \
     adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
     intel-clear-sans-fonts intel-one-mono-fonts \
     && \
+    fc-cache -f /usr/share/fonts/ 
+    && \
     rpm-ostree override remove \
     firefox firefox-langpacks \
     toolbox \
