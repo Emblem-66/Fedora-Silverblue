@@ -11,6 +11,7 @@ RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-os
 # BASE PACKAGES & DEBLOAT & FFmpeg
 RUN rpm-ostree install \
     distrobox \
+    vscode \
     libvirt virt-manager \
     ffmpegthumbnailer \
     ImageMagick \
