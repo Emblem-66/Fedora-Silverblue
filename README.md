@@ -14,6 +14,8 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 - [x] flathub
 - [x] adw-gtk3-theme
 - [ ] fonts working with flatpak
+- [ ] gsettings/desktop tweaking
+- [ ] sort of "first boot setup"
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
