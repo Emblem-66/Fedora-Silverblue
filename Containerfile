@@ -7,9 +7,9 @@ RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-os
     systemctl enable flatpak-update.timer && \
     systemctl disable flatpak-add-fedora-repos && \
     wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d && \
-    rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-# BASE PACKAGES & DEBLOAT & FFmpeg
-RUN rpm-ostree install \
+    rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
+    && \
+    rpm-ostree install \
     distrobox \
     code \
     libvirt virt-manager \
@@ -39,6 +39,6 @@ RUN rpm-ostree install \
     gnome-shell-extension-places-menu \
     gnome-shell-extension-window-list \
     && \
-    rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
-# CLEANUP
-RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
+    rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg \
+    && \
+    rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
