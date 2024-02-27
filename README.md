@@ -16,6 +16,7 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 - [ ] fonts working with flatpak
 - [ ] gsettings/desktop tweaking
 - [ ] sort of "first boot setup"
+- [ ] cosign
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
@@ -25,6 +26,3 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 - [FFmpeg](https://ffmpeg.org)
 - [ImageMagick](https://imagemagick.org)
 - [Inspiration: uBlue](https://github.com/ublue-os)
-### Notes
-- Cosign - don't see a reason, not gonna bother.
-- Licence - don't see a reason, not gonna bother.
