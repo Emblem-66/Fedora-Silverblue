@@ -21,7 +21,6 @@ font-antialiasing="rgba"
 font-name="IBM Plex Sans 10"
 document-font-name="IBM Plex Serif 10"
 monospace-font-name="IBM Plex Mono 10"
-titlebar-font 'IBM Plex Sans 10'
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer="list-view"
