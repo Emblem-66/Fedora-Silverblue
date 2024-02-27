@@ -1,7 +1,7 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 COPY /rootfs/ /
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
-    sed -i 's/#LockLayering.*#LockLayering=true/' /etc/rpm-ostreed.conf && \
+    sed -i 's/#LockLayering.*/LockLayering=true/' /etc/rpm-ostreed.conf && \
     systemctl enable rpm-ostreed-automatic.timer && \
     systemctl enable flatpak-update.service && \
     systemctl enable flatpak-update.timer && \
