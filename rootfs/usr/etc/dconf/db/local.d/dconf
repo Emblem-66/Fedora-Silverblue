@@ -1,5 +1,5 @@
 [org/gnome/shell] 
-enabled-extensions = ['caffeine@patapon.info']
+enabled-extensions = ['caffeine@patapon.info', 'legacyschemeautoswitcher@joshimukul29.gmail.com']
 favorite-apps = ['io.github.cboxdoerfer.FSearch', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'com.github.neithern.g4music', 'com.github.geigi.cozy', 'org.gnome.Calendar', 'org.gnome.Calculator', 'org.gnome.TextEditor', 'org.gnome.gitlab.somas.Apostrophe', 'md.obsidian.Obsidian', 'gnome-terminal']
 
 [org/gnome/software]
