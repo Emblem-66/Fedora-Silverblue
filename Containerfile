@@ -4,7 +4,7 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
     && \
     wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d \
     && \
-    wget https://copr.fedorainfracloud.org/coprs/peterwu/iosevka/repo/fedora-$(rpm -E %fedora)//peterwu-iosevka-fedora-$(rpm -E %fedora).repo?arch=x86_64 -O /etc/yum.repos.d/_copr_iosevka.repo \
+    wget https://copr.fedorainfracloud.org/coprs/peterwu/iosevka/repo/fedora-$(rpm -E %fedora)/peterwu-iosevka-fedora-$(rpm -E %fedora).repo?arch=x86_64 -O /etc/yum.repos.d/_copr_iosevka.repo \
     && \
     rpm-ostree install iosevka \
     && \
