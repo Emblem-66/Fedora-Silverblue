@@ -6,8 +6,6 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
     && \
     wget https://copr.fedorainfracloud.org/coprs/peterwu/iosevka/repo/fedora-$(rpm -E %fedora)/peterwu-iosevka-fedora-$(rpm -E %fedora).repo?arch=x86_64 -O /etc/yum.repos.d/_copr_iosevka.repo \
     && \
-    rpm-ostree install iosevka \
-    && \
     rpm-ostree install \
         https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
         https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
@@ -20,6 +18,7 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
         gnome-tweaks dconf-editor \
+        iosevka \
         ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
         adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
     && \
