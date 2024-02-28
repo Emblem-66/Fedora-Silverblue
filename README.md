@@ -18,8 +18,7 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
   - [x] dconf
   - [x] extensions
   - [x] fonts
-    - [ ] working with flatpak
-### References
+  ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
 - [Virt-Manager](https://virt-manager.org)
