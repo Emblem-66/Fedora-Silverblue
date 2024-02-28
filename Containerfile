@@ -2,6 +2,8 @@ FROM quay.io/fedora/fedora-silverblue:latest
 COPY /rootfs/ /
 RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita \
     && \
+    git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com \ 
+    && \
     wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d \
     && \
     rpm-ostree install \
