@@ -44,6 +44,8 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
     && \
     systemctl enable flatpak-update.timer \
     && \
+    systemctl enable dconf-update.service \
+    && \
     fc-cache -f /usr/share/fonts/ \
     && \
     dconf update \
