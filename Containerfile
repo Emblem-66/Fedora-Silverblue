@@ -48,6 +48,4 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
     && \
     fc-cache -f /usr/share/fonts/ \
     && \
-    dconf update \
-    && \
     rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
