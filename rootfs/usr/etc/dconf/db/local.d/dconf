@@ -1,6 +1,33 @@
-[org/gnome/shell] 
-enabled-extensions=['legacyschemeautoswitcher@joshimukul29.gmail.com', 'caffeine@patapon.info']
-favorite-apps = ['io.github.cboxdoerfer.FSearch.desktop', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'com.github.neithern.g4music.desktop', 'com.github.geigi.cozy.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Terminal.desktop']
+[org/gnome/shell]
+enabled-extensions=['caffeine@patapon.info', 'legacyschemeautoswitcher@joshimukul29.gmail.com']
+favorite-apps=['io.github.cboxdoerfer.FSearch', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'com.github.neithern.g4music', 'com.github.geigi.cozy', 'org.gnome.Calendar', 'org.gnome.Calculator', 'org.gnome.TextEditor', 'gnome-terminal']
+
+[org/gnome/desktop/app-folders]
+folder-children=['Games', 'SoundVideo', 'Sharing', 'Office', 'Graphics', 'Accessories']
+
+[org/gnome/desktop/app-folders/folders/Games]
+apps=['hu.kramo.Cartridges.desktop', 'com.usebottles.bottles.desktop', 'com.valvesoftware.Steam.desktop', 'com.heroicgameslauncher.hgl.desktop', 'org.prismlauncher.PrismLauncher.desktop', 'org.openmw.OpenMW.desktop', 'com.github.Matoking.protontricks.desktop', 'com.vysp3r.ProtonPlus.desktop', 'org.openmw.OpenMW.OpenCS.desktop', 'eu.vcmi.VCMI.desktop', 'eu.vcmi.VCMI.editor.desktop', 'com.github.cubitect.cubiomes-viewer.desktop']
+name='Games'
+
+[org/gnome/desktop/app-folders/folders/SoundVideo]
+apps=['com.github.neithern.g4music.desktop', 'com.github.geigi.cozy.desktop', 'io.github.celluloid_player.Celluloid.desktop', 'org.gnome.gitlab.YaLTeR.Identity.desktop', 'net.mediaarea.MediaInfo.desktop']
+name='Sound & Video'
+
+[org/gnome/desktop/app-folders/folders/Sharing]
+apps=['com.transmissionbt.Transmission.desktop', 'org.jdownloader.JDownloader.desktop', 'app.drey.Warp.desktop']
+name='Sharing'
+
+[org/gnome/desktop/app-folders/folders/Office]
+apps=['org.onlyoffice.desktopeditors.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Evince.desktop', 'org.gnome.gitlab.somas.Apostrophe.desktop', 'md.obsidian.Obsidian.desktop', 'org.libreoffice.LibreOffice.desktop', 'org.libreoffice.LibreOffice.base.desktop', 'org.libreoffice.LibreOffice.calc.desktop', 'org.libreoffice.LibreOffice.draw.desktop', 'org.libreoffice.LibreOffice.impress.desktop', 'org.libreoffice.LibreOffice.math.desktop', 'org.libreoffice.LibreOffice.writer.desktop']
+name='Office'
+
+[org/gnome/desktop/app-folders/folders/Graphics]
+apps=['org.gnome.Loupe.desktop', 'io.gitlab.adhami3310.Converter.desktop', 'io.gitlab.theevilskeleton.Upscaler.desktop', 'org.gimp.GIMP.desktop', 'org.gnome.gThumb.desktop', 'page.codeberg.Imaginer.Imaginer.desktop', 'io.github.tfuxu.Halftone.desktop', 'com.github.taiko2k.avvie.desktop', 'org.blender.Blender.desktop', 'com.github.finefindus.eyedropper.desktop']
+name='Graphics'
+
+[org/gnome/desktop/app-folders/folders/Accessories]
+apps=['org.gnome.FileRoller.desktop', 'io.github.dvlv.boxbuddyrs.desktop', 'com.neatdecisions.Detwinner.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'gnome-system-monitor.desktop', 'org.gnome.Settings.desktop', 'com.github.tchx84.Flatseal.desktop', 'virt-manager.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.meld.desktop']
+name='Accessories'
 
 [org/gnome/software]
 allow-updates=false
@@ -18,18 +45,8 @@ sources=[('xkb', 'us'), ('xkb', 'cz+qwerty')]
 
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
-document-font-name='IBM Plex Serif 10'
-font-antialiasing='rgba'
-font-hinting='slight'
-font-name='IBM Plex Sans 10'
-gtk-theme='adw-gtk3-dark'
-icon-theme='MoreWaita'
-monospace-font-name='IBM Plex Mono 10'
-
-[org/gnome/desktop/interface]
 icon-theme="MoreWaita"
 gtk-theme="adw-gtk3-dark"
-font-antialiasing="rgba"
 font-name="IBM Plex Sans 10"
 document-font-name="IBM Plex Serif 10"
 monospace-font-name="IBM Plex Mono 10"
