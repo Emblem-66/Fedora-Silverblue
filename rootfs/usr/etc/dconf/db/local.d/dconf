@@ -1,6 +1,6 @@
 [org/gnome/shell] 
-enabled-extensions = ['caffeine@patapon.info', 'legacyschemeautoswitcher@joshimukul29.gmail.com']
-favorite-apps = ['io.github.cboxdoerfer.FSearch', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'com.github.neithern.g4music', 'com.github.geigi.cozy', 'org.gnome.Calendar', 'org.gnome.Calculator', 'org.gnome.TextEditor', 'org.gnome.gitlab.somas.Apostrophe', 'md.obsidian.Obsidian', 'gnome-terminal']
+enabled-extensions=['legacyschemeautoswitcher@joshimukul29.gmail.com', 'caffeine@patapon.info']
+favorite-apps = ['io.github.cboxdoerfer.FSearch.desktop', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'com.github.neithern.g4music.desktop', 'com.github.geigi.cozy.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Terminal.desktop']
 
 [org/gnome/software]
 allow-updates=false
@@ -12,6 +12,19 @@ center-new-windows=true
 
 [org/gnome/desktop/wm/preferences]
 action-middle-click-titlebar="minimize"
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'us'), ('xkb', 'cz+qwerty')]
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+document-font-name='IBM Plex Serif 10'
+font-antialiasing='rgba'
+font-hinting='slight'
+font-name='IBM Plex Sans 10'
+gtk-theme='adw-gtk3-dark'
+icon-theme='MoreWaita'
+monospace-font-name='IBM Plex Mono 10'
 
 [org/gnome/desktop/interface]
 icon-theme="MoreWaita"
@@ -39,6 +52,9 @@ default-sort-order="name"
 [org/gnome/nautilus/list-view]
 use-tree-view=true
 default-visible-columns = "['name', 'size', 'type', 'date_modified']"
+
+[org/gnome/nautilus/icon-view]
+captions=['type', 'size', 'none']
 
 [org/gtk/settings/file-chooser]
 sort-directories-first=true
