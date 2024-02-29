@@ -17,7 +17,7 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
   - [x] adw-gtk3-theme
   - [ ] dconf
   - [x] extensions
-  - [ ] fonts
+  - [x] fonts
   ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
