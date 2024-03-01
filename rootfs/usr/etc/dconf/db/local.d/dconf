@@ -1,6 +1,6 @@
 [org/gnome/shell]
 enabled-extensions=['caffeine@patapon.info', 'legacyschemeautoswitcher@joshimukul29.gmail.com']
-favorite-apps=['io.github.cboxdoerfer.FSearch', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox', 'com.github.neithern.g4music', 'com.github.geigi.cozy', 'org.gnome.Calendar', 'org.gnome.Calculator', 'org.gnome.TextEditor', 'org.gnome.Terminal.desktop']
+favorite-apps=['io.github.cboxdoerfer.FSearch.desktop', 'org.gnome.Nautilus.desktop', 'org.mozilla.firefox.desktop', 'com.github.neithern.g4music.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Terminal.desktop']
 
 [org/gnome/desktop/app-folders]
 folder-children=['Games', 'SoundVideo', 'Sharing', 'Office', 'Graphics', 'Accessories']
