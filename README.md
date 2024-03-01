@@ -7,19 +7,18 @@ Custom Fedora Silverblue image.
 rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ```
 ### Features
-- Automatic Updates
-  - [x] rpm-ostree
-  - [x] flatpak
+- automatic updates
 - virt-manager, distrobox
 - flathub
 - GNOME
-  - [x] adw-gtk3-theme
-  - [ ] dconf
-  - [x] extensions
-  - [x] fonts
+  - adw-gtk3-theme
+  - dconf
+  - extensions
+  - fonts
 - ffmpeg, imagemagick
 ### Plans
 - move ffmpeg, imagemagick to distrobox (alpine/opensuse?) for newer versions
+- first run setup (install flatpaks, etc)
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
