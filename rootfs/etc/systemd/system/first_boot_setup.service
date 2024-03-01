@@ -1,0 +1,11 @@
+[Unit]
+Description=First Boot Setup
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/path/to/first_boot_setup.sh
+
+[Install]
+WantedBy=default.target
+
