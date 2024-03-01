@@ -11,13 +11,13 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
   - [x] rpm-ostree
   - [x] flatpak
 - virt-manager, distrobox
-- ffmpeg, imagemagick
 - flathub
 - GNOME
   - [x] adw-gtk3-theme
   - [ ] dconf
   - [x] extensions
   - [x] fonts
+- ffmpeg, imagemagick
   ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
