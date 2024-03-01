@@ -14,11 +14,11 @@ RUN rpm-ostree install \
         distrobox \
         libvirt virt-manager \
         ffmpegthumbnailer \
-        ImageMagick \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
         ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
-        adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts
+        adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
+        ImageMagick
 
 # Uninstall packages
 RUN rpm-ostree override remove \
