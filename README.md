@@ -8,7 +8,7 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 ```
 ### Features
 - Automatic Updates
-  - [x] rpm-ostree
+ - [x] rpm-ostree
   - [x] flatpak
 - virt-manager, distrobox
 - flathub
