@@ -42,6 +42,9 @@ RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-os
     systemctl enable flatpak-update.service && \
     systemctl enable flatpak-update.timer && \
     systemctl enable dconf-update.service && \
+    sudo systemctl enable first_boot_setup.service && \
+    chmod +x /usr/local/bin/first_boot_script.sh && \
+    chmod +x /usr/local/bin/first_boot_check.sh && \
     fc-cache -f /usr/share/fonts/
 
 # Cleanup
