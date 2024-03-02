@@ -54,13 +54,6 @@ font-name="IBM Plex Sans 10"
 document-font-name="IBM Plex Serif 10"
 monospace-font-name="IBM Plex Mono 10"
 
-[org/gnome/desktop/background]
-picture-uri='file:///usr/share/backgrounds/wallpapers/wallhaven-exy3ml.png'
-picture-uri-dark='file:///usr/share/backgrounds/wallpapers/wallhaven-exy3ml.png'
-picture-options='zoom'
-primary-color='000000'
-secondary-color='FFFFFF'
-
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-type='nothing'
 
