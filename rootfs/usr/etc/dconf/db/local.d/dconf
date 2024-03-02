@@ -64,7 +64,7 @@ default-sort-order="name"
 
 [org/gnome/nautilus/list-view]
 use-tree-view=true
-default-visible-columns = "['name', 'size', 'type', 'date_modified']"
+default-visible-columns=['name', 'size', 'type', 'date_modified']
 
 [org/gnome/nautilus/icon-view]
 captions=['type', 'size', 'none']
