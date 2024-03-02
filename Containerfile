@@ -41,9 +41,8 @@ RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-os
     systemctl enable rpm-ostreed-automatic.timer && \
     systemctl enable flatpak-update.service && \
     systemctl enable flatpak-update.timer && \
-    systemctl enable dconf-update.service
-#&& \
-#    fc-cache -f /usr/share/fonts/
+    systemctl enable dconf-update.service && \
+    fc-cache -f /usr/share/fonts/
 
 # Cleanup
 RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
