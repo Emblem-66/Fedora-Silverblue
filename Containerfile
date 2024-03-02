@@ -1,7 +1,8 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 
 # Copy files and configs
-COPY rootfs/ /
+# COPY rootfs/ /
+COPY rootfs/usr/share/backgrounds/wallpapers/wallhaven-exy3ml.png /usr/share/backgrounds/wallpapers/
 
 # Download stuff and repos
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
