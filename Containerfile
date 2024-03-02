@@ -1,7 +1,7 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 
 # Copy files and configs
-COPY rootfs/ /
+COPY rootfs/* /
 # COPY rootfs/usr/share/backgrounds/wallpapers/wallhaven-exy3ml.png /usr/share/backgrounds/wallpapers/
 
 # Download stuff and repos
