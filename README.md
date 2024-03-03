@@ -23,6 +23,4 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 - [Virt-Manager](https://virt-manager.org)
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Flathub](https://flathub.org)
-- [FFmpeg](https://ffmpeg.org)
-- [ImageMagick](https://imagemagick.org)
 - [Inspiration: uBlue](https://github.com/ublue-os)
