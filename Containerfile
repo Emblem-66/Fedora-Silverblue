@@ -12,7 +12,7 @@ RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-
 # Install packages
 RUN rpm-ostree install \
         distrobox \
-        libvirt virt-manager \
+        virt-manager \
         ffmpegthumbnailer \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
