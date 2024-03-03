@@ -16,9 +16,7 @@ RUN rpm-ostree install \
         ffmpegthumbnailer \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
-        ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
-        adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
-        ImageMagick
+        ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts
 
 # Uninstall packages
 RUN rpm-ostree override remove \
@@ -33,7 +31,8 @@ RUN rpm-ostree override remove \
         gnome-shell-extension-window-list
 
 # FFmpeg
-RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
+#RUN rpm-ostree install ImageMagick && \
+#    rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
 
 # Setup services
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
