@@ -30,10 +30,6 @@ RUN rpm-ostree override remove \
         gnome-shell-extension-places-menu \
         gnome-shell-extension-window-list
 
-# FFmpeg
-#RUN rpm-ostree install ImageMagick && \
-#    rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
-
 # Setup services
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
     sed -i 's/#LockLayering.*/LockLayering=true/' /etc/rpm-ostreed.conf && \
