@@ -15,10 +15,8 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
   - dconf
   - extensions
   - fonts
-- ffmpeg, imagemagick
 ### Plans
-- move ffmpeg, imagemagick to distrobox (alpine/opensuse?) for newer versions
-- first run setup (install flatpaks, etc)
+- first run setup (install flatpaks, setup homebrew, etc)
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
