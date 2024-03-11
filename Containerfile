@@ -5,13 +5,13 @@ COPY rootfs/ /
 
 # Download stuff and repos
 RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d && \
+    rm -r /usr/lib/fedora-third-party/ && \
     rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo && \
     rm /etc/yum.repos.d/fedora-cisco-openh264.repo && \
     rm /etc/yum.repos.d/google-chrome.repo && \
     rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo && \
     git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
     git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com    
-    # rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
 
 # Install packages
 RUN rpm-ostree install \
@@ -20,7 +20,6 @@ RUN rpm-ostree install \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
         ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts
-        # ffmpegthumbnailer \
 
 # Uninstall packages
 RUN rpm-ostree override remove \
