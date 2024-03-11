@@ -5,7 +5,7 @@ COPY rootfs/ /
 
 # Download stuff and repos
 RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d && \
-    rm -r /usr/lib/fedora-third-party/ && \
+    rm -r /usr/lib/fedora-third-party && \
     rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo && \
     rm /etc/yum.repos.d/fedora-cisco-openh264.repo && \
     rm /etc/yum.repos.d/google-chrome.repo && \
