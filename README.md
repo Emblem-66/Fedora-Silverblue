@@ -19,7 +19,6 @@ rpm-ostree cancel && rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem
 - first run setup (install flatpaks, setup homebrew, etc)
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
-- [RPM-Fusion](https://rpmfusion.org/Howto/OSTree)
 - [Virt-Manager](https://virt-manager.org)
 - [Distrobox](https://github.com/89luca89/distrobox)
 - [Flathub](https://flathub.org)
