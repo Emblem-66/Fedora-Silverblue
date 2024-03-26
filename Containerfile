@@ -14,7 +14,7 @@ RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/
     git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com    
 
 # Install packages
-RUN rpm-ostree install \
+RUN rpm-ostree install gnome-tweaks \
         distrobox \
         virt-manager \
         adw-gtk3-theme \
