@@ -19,7 +19,11 @@ RUN rpm-ostree install \
         virt-manager \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
-        ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts
+        ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
+        adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
+        rsms-inter-fonts gfs-baskerville-fonts \
+        sorkintype-merriweather-fonts sorkintype-merriweather-sans-fonts \
+        intel-clear-sans-fonts intel-one-mono-fonts
 
 # Uninstall packages
 RUN rpm-ostree override remove \
