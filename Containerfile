@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-silverblue:39
+FROM quay.io/fedora/fedora-silverblue:latest
 
 # Copy files and configs
 COPY rootfs/ /
