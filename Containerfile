@@ -31,7 +31,7 @@ RUN rpm-ostree override remove \
         toolbox \
         yelp yelp-xsl yelp-libs \
         gnome-tour \
-        gnome-shell-extension-apps-menu gnome-classic-session \
+        gnome-shell-extension-apps-menu gnome-classic-session gnome-classic-session-xsession \
         gnome-shell-extension-background-logo \
         gnome-shell-extension-launch-new-instance \
         gnome-shell-extension-places-menu \
