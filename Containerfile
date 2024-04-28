@@ -14,16 +14,14 @@ RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/
     git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com    
 
 # Install packages
-RUN rpm-ostree install gnome-tweaks \
-        distrobox android-tools \
+RUN rpm-ostree install \
+        distrobox \
         virt-manager \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
         ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
         adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
-        rsms-inter-fonts gfs-baskerville-fonts \
-        sorkintype-merriweather-fonts sorkintype-merriweather-sans-fonts \
-        intel-clear-sans-fonts intel-one-mono-fonts
+        sorkintype-merriweather-fonts sorkintype-merriweather-sans-fonts
 
 # Uninstall packages
 RUN rpm-ostree override remove \
