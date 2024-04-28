@@ -8,7 +8,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ```
 ### Features
 - automatic updates
-- virt-manager, distrobox
+- virt-manager
 - flathub
 - GNOME
   - adw-gtk3-theme
