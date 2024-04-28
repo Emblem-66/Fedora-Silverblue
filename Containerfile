@@ -15,7 +15,6 @@ RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/
 
 # Install packages
 RUN rpm-ostree install \
-        distrobox \
         virt-manager \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
