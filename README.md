@@ -20,6 +20,5 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
 - [Virt-Manager](https://virt-manager.org)
-- [Distrobox](https://github.com/89luca89/distrobox)
 - [Flathub](https://flathub.org)
 - [Inspiration: uBlue](https://github.com/ublue-os)
