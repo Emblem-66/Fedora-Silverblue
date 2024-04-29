@@ -10,6 +10,8 @@ RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/
     rm /etc/yum.repos.d/fedora-cisco-openh264.repo && \
     rm /etc/yum.repos.d/google-chrome.repo && \
     rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo && \
+    rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
+    rm /etc/yum.repos.d/fedora-updates-archive.repo && \
     git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
     git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com    
 
