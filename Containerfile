@@ -17,7 +17,7 @@ RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/
 
 # Install packages
 RUN rpm-ostree install \
-        virt-manager virt-install \
+        virt-manager virt-install libvirt \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
         ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
