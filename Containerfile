@@ -17,6 +17,7 @@ RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/
 
 # Install packages
 RUN rpm-ostree install \
+        distrobox \
         virt-manager virt-install libvirt \
         adw-gtk3-theme \
         gnome-shell-extension-caffeine \
@@ -27,7 +28,6 @@ RUN rpm-ostree install \
 # Uninstall packages
 RUN rpm-ostree override remove \
         firefox firefox-langpacks \
-        toolbox \
         yelp yelp-xsl yelp-libs \
         gnome-tour \
         gnome-shell-extension-apps-menu gnome-classic-session gnome-classic-session-xsession \
