@@ -23,7 +23,8 @@ RUN rpm-ostree install \
         gnome-shell-extension-caffeine \
         ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
         adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
-        sorkintype-merriweather-fonts sorkintype-merriweather-sans-fonts
+        sorkintype-merriweather-fonts sorkintype-merriweather-sans-fonts \
+        rsms-inter-fonts levien-inconsolata-fonts
 
 # Uninstall packages
 RUN rpm-ostree override remove \
