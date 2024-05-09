@@ -47,6 +47,7 @@ RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-os
     systemctl enable flatpak-update.service && \
     systemctl enable flatpak-update.timer && \
     systemctl enable dconf-update.service && \
+    systemctl enable libvirtd.service && \
     fc-cache -f /usr/share/fonts/
 
 # Cleanup
