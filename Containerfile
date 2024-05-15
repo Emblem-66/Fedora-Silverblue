@@ -13,7 +13,8 @@ RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/
     rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
     rm /etc/yum.repos.d/fedora-updates-archive.repo && \
     git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
-    git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com    
+    git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com && \
+    rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Install packages
 RUN rpm-ostree install \
@@ -27,7 +28,8 @@ RUN rpm-ostree install \
         rsms-inter-fonts levien-inconsolata-fonts \
         mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts \
         jetbrains-mono-fonts \
-        cascadia-code-fonts input-remapper
+        cascadia-code-fonts \
+        steam mangohud input-remapper
 
 # Uninstall packages
 RUN rpm-ostree override remove \
