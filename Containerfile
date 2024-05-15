@@ -29,7 +29,7 @@ RUN rpm-ostree install \
         mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts \
         jetbrains-mono-fonts \
         cascadia-code-fonts \
-        steam mangohud input-remapper
+        steam mangohud input-remapper ffmpeg
 
 # Uninstall packages
 RUN rpm-ostree override remove \
