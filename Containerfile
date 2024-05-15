@@ -31,6 +31,7 @@ RUN rpm-ostree install \
 
 # Uninstall packages
 RUN rpm-ostree override remove \
+        toolbox \
         firefox firefox-langpacks \
         yelp yelp-xsl yelp-libs \
         gnome-tour \
