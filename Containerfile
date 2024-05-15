@@ -27,7 +27,7 @@ RUN rpm-ostree install \
         rsms-inter-fonts levien-inconsolata-fonts \
         mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts \
         jetbrains-mono-fonts \
-        cascadia-code-fonts
+        cascadia-code-fonts input-remapper
 
 # Uninstall packages
 RUN rpm-ostree override remove \
@@ -49,6 +49,7 @@ RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-os
     systemctl enable flatpak-update.timer && \
     systemctl enable dconf-update.service && \
     systemctl enable libvirtd.service && \
+    systemctl enable input-remapper && \
     fc-cache -f /usr/share/fonts/
 
 # Cleanup
