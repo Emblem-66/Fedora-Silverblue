@@ -22,10 +22,10 @@ RUN rpm-ostree override remove \
 		libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg && \
     rpm-ostree install \
 		gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
+	rpm-ostree install \
+		mesa-vdpau-drivers-freeworld mesa-filesystem && \
 	rpm-ostree override remove \
 		mesa-va-drivers --install=mesa-va-drivers-freeworld && \
-	rpm-ostree install \
-		mesa-vdpau-drivers-freeworld && \
 	rpm-ostree install \
 		ffmpeg discord && \
 	rpm-ostree install \
