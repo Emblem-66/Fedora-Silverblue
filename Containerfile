@@ -31,7 +31,7 @@ RUN rpm-ostree override remove \
 	rpm-ostree install \
 		celluloid g4music cozy && \
 	rpm-ostree install \
-		gnome-calendar gnome-text-editor gnome-calculator evince && \
+		file-roller loupe gnome-calendar gnome-text-editor gnome-calculator evince && \
 	rpm-ostree install \
 		fragments transmission && \
 	rpm-ostree install \
