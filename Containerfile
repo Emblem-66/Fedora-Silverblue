@@ -44,11 +44,9 @@ RUN rpm-ostree install \
 		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
 		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
 		sorkintype-merriweather-fonts sorkintype-merriweather-sans-fonts \
-		rsms-inter-fonts \
-		levien-inconsolata-fonts \
+		rsms-inter-fonts	levien-inconsolata-fonts \
 		mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts \
-		jetbrains-mono-fonts \
-		cascadia-code-fonts && \
+		jetbrains-mono-fonts cascadia-code-fonts && \
 	fc-cache -f /usr/share/fonts/
 # Gaming
 RUN rpm-ostree install \
