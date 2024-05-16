@@ -32,12 +32,7 @@ RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-
 
 # General
 RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
-	git clone https://github.com/mjakeman/s76-scheduler-plugin /usr/share/gnome-shell/extensions/s76-scheduler@mattjakeman.com && \
-	git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com
-RUN rpm-ostree install input-remapper && \
-	systemctl enable input-remapper && \
-	rpm-ostree install system76-scheduler && \
-	systemctl enable com.system76.Scheduler.service && \
+	git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com && \
 	rpm-ostree install \
 		adw-gtk3-theme \
 		gnome-shell-extension-caffeine \
@@ -48,6 +43,16 @@ RUN rpm-ostree install input-remapper && \
 		gnome-calculator \
 		evince \
 		fragments transmission
+
+# Input Remapper
+RUN rpm-ostree install input-remapper && \
+	systemctl enable input-remapper
+	
+# System76 Scheduler
+RUN	wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && \
+	git clone https://github.com/mjakeman/s76-scheduler-plugin /usr/share/gnome-shell/extensions/s76-scheduler@mattjakeman.com && \
+	rpm-ostree install system76-scheduler && \
+	systemctl enable com.system76.Scheduler.service
 
 # Fonts
 RUN rpm-ostree install \
