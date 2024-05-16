@@ -43,9 +43,7 @@ RUN rpm-ostree override remove \
         gnome-shell-extension-background-logo \
         gnome-shell-extension-launch-new-instance \
         gnome-shell-extension-places-menu \
-        gnome-shell-extension-window-list \
-        libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg && \
-        rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld && rpm-ostree install mesa-vdpau-drivers-freeworld gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi
+        gnome-shell-extension-window-list
 
 # Setup services
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
