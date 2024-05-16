@@ -10,10 +10,7 @@ RUN systemctl enable rpm-ostreed-automatic.timer && \
 # Debloat
 RUN rm -r /usr/lib/fedora-third-party && \
 	rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo && \
-	rm /etc/yum.repos.d/fedora-cisco-openh264.repo && \
-	rm /etc/yum.repos.d/google-chrome.repo && \
-	rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo && \
-	rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
+	rm /etc/yum.repos.d/fedora-cisco-openh264.repo && rm /etc/yum.repos.d/google-chrome.repo && 	rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo && rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
 	rm /etc/yum.repos.d/fedora-updates-archive.repo && \
 	rpm-ostree override remove \
 		toolbox \
