@@ -27,9 +27,9 @@ RUN rpm-ostree override remove \
 	rpm-ostree install \
 		ffmpeg discord && \
 	rpm-ostree install \
-		steam steam-devices lutris bottles goverlay mangohud input-remapper system76-scheduler && \
+		steam steam-devices protontricks lutris bottles goverlay mangohud input-remapper system76-scheduler && \
 	rpm-ostree install \
-		cozy celluloid g4music && \
+		celluloid g4music cozy && \
 	rpm-ostree install \
 		gnome-calendar gnome-text-editor gnome-calculator evince && \
 	rpm-ostree install \
