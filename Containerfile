@@ -33,12 +33,7 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
 	rpm-ostree install \
 		adw-gtk3-theme \
 		gnome-shell-extension-caffeine \
-		file-roller \
-		loupe \
-		gnome-calendar \
-		gnome-text-editor \
-		gnome-calculator \
-		evince \
+		file-roller	loupe 	gnome-calendar gnome-text-editor gnome-calculator	evince \
 		fragments transmission
 
 # Input Remapper
@@ -66,8 +61,7 @@ RUN rpm-ostree install \
 # Gaming
 RUN rpm-ostree install \
 		steam steam-devices protontricks \
-		lutris \
-		bottles \
+		lutris 	bottles \
 		goverlay mangohud vkBasalt
 
 # Media
@@ -81,6 +75,5 @@ RUN rpm-ostree install virt-manager distrobox && \
 
 # Finish
 RUN sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
-	sed -i 's/#LockLayering.*/LockLayering=true/' /etc/rpm-ostreed.conf
-
-RUN rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
+	sed -i 's/#LockLayering.*/LockLayering=true/' /etc/rpm-ostreed.conf && \
+rpm-ostree cleanup -m && rm -rf /var/* /tmp/* && ostree container commit
