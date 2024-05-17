@@ -14,44 +14,29 @@ RUN sed -i '0,/enabled=0/s//enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam
 
 # REPOS
 RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d
-RUN rpm-ostree install \
-	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
-	sed -i '0,/enabled=0/s//enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree.repo /etc/yum.repos.d/rpmfusion-free.repo
+#RUN rpm-ostree install \
+#	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+#	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
+#	sed -i '0,/enabled=0/s//enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree.repo /etc/yum.repos.d/rpmfusion-free.repo
 
 # GNOME
 #RUN rpm-ostree install adw-gtk3-theme gnome-shell-extension-caffeine 
 # ffmpegthumbnailer file-roller loupe gthumb gnome-calendar gnome-text-editor gnome-calculator evince fragments celluloid g4music cozy
 RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
 	git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com && \
-	rpm-ostree install adw-gtk3-theme gnome-shell-extension-caffeine ffmpegthumbnailer
+	rpm-ostree install adw-gtk3-theme gnome-shell-extension-caffeine #ffmpegthumbnailer
 
 
 # MEDIA
 # RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi 
-RUN rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
+#RUN rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free libavutil-free libpostproc-free libswresample-free libswscale-free --install ffmpeg
 
 # FSYNC KERNEL
 #RUN wget https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-$(rpm -E %fedora)/sentry-kernel-fsync-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_sentry-kernel-fsync.repo && rpm-ostree install kernel-fsync #kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra kernel-headers
 
 # RUN rpm-ostree install mesa-vulkan-drivers mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
-RUN rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
+#RUN rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
 # --install=mesa-va-drivers-freeworld 
-
-RUN curl -Lo /etc/yum.repos.d/_copr_sentry-kernel-fsync.repo https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-$(rpm -E %fedora)/sentry-kernel-fsync-fedora-$(rpm -E %fedora).repo && \
-rpm-ostree override replace \
---experimental \
---from repo=copr:copr.fedorainfracloud.org:sentry:kernel-fsync \
-kernel \
-kernel-core \
-kernel-modules \
-kernel-modules-core \
-kernel-modules-extra \
-kernel-uki-virt \
-kernel-headers \
-kernel-devel
-
-
 
 # System76 Scheduler
 RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && rpm-ostree install system76-scheduler gnome-shell-extension-system76-scheduler && systemctl enable com.system76.Scheduler.service
