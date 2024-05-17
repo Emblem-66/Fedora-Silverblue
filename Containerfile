@@ -44,9 +44,9 @@ RUN rpm-ostree override remove libavcodec-free libavfilter-free libavformat-free
 # FSYNC KERNEL
 RUN wget https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-$(rpm -E %fedora)/sentry-kernel-fsync-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_sentry-kernel-fsync.repo && rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:kernel-fsync kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra kernel-headers
 
-RUN rpm-ostree install mesa-vulkan-drivers mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
-#    rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld && \
-#    rpm-ostree install mesa-vdpau-drivers-freeworld ; \
+# RUN rpm-ostree install mesa-vulkan-drivers mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
+RUN rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
+# --install=mesa-va-drivers-freeworld 
 
 
 # System76 Scheduler
