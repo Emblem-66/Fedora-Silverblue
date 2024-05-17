@@ -38,7 +38,7 @@ RUN rpm-ostree install \
 		gnome-text-editor \
 		gnome-calculator \
 		evince \
-		fragments transmission
+		fragments
 
 # Input Remapper
 RUN rpm-ostree install input-remapper && \
@@ -51,10 +51,10 @@ RUN	wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/re
 
 # Gaming
 RUN rpm-ostree install \
-		steam steam-devices protontricks \
+		steam steam-devices \
 		lutris \
 		bottles \
-		goverlay mangohud vkBasalt \
+		goverlay mangohud \
 		celluloid \
 		g4music \
 		cozy
