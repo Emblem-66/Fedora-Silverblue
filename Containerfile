@@ -49,7 +49,7 @@ RUN rpm-ostree install steam steam-devices bottles goverlay mangohud
 # MEDIA
 # RUN rpm-ostree override remove libavdevice-free libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
 RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi 
-RUN rpm-ostree install ffmpeg --uninstall=ffmpeg-free
+RUN rpm-ostree install ffmpeg
 
 # System76 Scheduler
 RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && rpm-ostree install system76-scheduler && systemctl enable com.system76.Scheduler.service
