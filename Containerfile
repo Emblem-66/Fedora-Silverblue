@@ -15,17 +15,7 @@ RUN rm -r /usr/lib/fedora-third-party && \
 	rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo && \
 	rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
 	rm /etc/yum.repos.d/fedora-updates-archive.repo && \
-	rpm-ostree override remove \
-		toolbox \
-		yelp yelp-xsl yelp-libs \
-		gnome-tour \
-		gnome-shell-extension-apps-menu gnome-classic-session gnome-classic-session-xsession \
-		gnome-shell-extension-background-logo \
-		gnome-shell-extension-launch-new-instance \
-		gnome-shell-extension-places-menu \
-		gnome-shell-extension-window-list
-
-#		firefox firefox-langpacks \
+	rpm-ostree override remove toolbox yelp yelp-xsl yelp-libs gnome-tour # firefox firefox-langpacks
 
 # Repos
 RUN rpm-ostree install \
@@ -40,9 +30,10 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
 # General
 RUN rpm-ostree install \
 		adw-gtk3-theme \
+		ffmpegthumbnailer \
 		gnome-shell-extension-caffeine \
 		file-roller \
-		loupe \
+		loupe gthumb \
 		gnome-calendar \
 		gnome-text-editor \
 		gnome-calculator \
