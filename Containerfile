@@ -10,7 +10,7 @@ RUN rm -r /usr/lib/fedora-third-party && \
 	rpm-ostree override remove toolbox yelp yelp-xsl yelp-libs gnome-tour firefox firefox-langpacks
 
 # GAMING
-RUN sed -i '0,/enabled=0/s//enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && rpm-ostree install steam goverlay mangohud
+# RUN sed -i '0,/enabled=0/s//enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && rpm-ostree install steam goverlay mangohud
 
 # REPOS
 RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d
