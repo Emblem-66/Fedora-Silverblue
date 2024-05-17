@@ -8,14 +8,14 @@ RUN systemctl enable rpm-ostreed-automatic.timer && \
 	systemctl enable dconf-update.service
 
 # DEBLOAT
-#RUN rm -r /usr/lib/fedora-third-party && \
-#	rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo && \
-#	rm /etc/yum.repos.d/fedora-cisco-openh264.repo && \
-#	rm /etc/yum.repos.d/google-chrome.repo && \
-#	rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo && \
-#	rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
-#	rm /etc/yum.repos.d/fedora-updates-archive.repo && \
-RUN rpm-ostree override remove toolbox yelp yelp-xsl yelp-libs gnome-tour # firefox firefox-langpacks
+RUN rm -r /usr/lib/fedora-third-party && \
+	rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo && \
+	rm /etc/yum.repos.d/fedora-cisco-openh264.repo && \
+	rm /etc/yum.repos.d/google-chrome.repo && \
+	rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo && \
+	rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
+	rm /etc/yum.repos.d/fedora-updates-archive.repo && \
+	rpm-ostree override remove toolbox yelp yelp-xsl yelp-libs gnome-tour firefox firefox-langpacks
 
 # REPOS
 RUN rpm-ostree install \
@@ -31,25 +31,15 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
 RUN rpm-ostree install \
 		adw-gtk3-theme \
 		ffmpegthumbnailer \
-		gnome-shell-extension-caffeine \
-		file-roller \
-		loupe gthumb \
-		gnome-calendar \
-		gnome-text-editor \
-		gnome-calculator \
-		evince \
-		fragments \
-		celluloid \
-		g4music \
-		cozy
+		gnome-shell-extension-caffeine # file-roller loupe gthumb gnome-calendar gnome-text-editor gnome-calculator evince fragments celluloid g4music cozy
 
 # GAMING
 RUN rpm-ostree install steam steam-devices bottles goverlay mangohud
 
 # MEDIA
 # RUN rpm-ostree override remove libavdevice-free libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
-RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi 
-RUN rpm-ostree install ffmpeg
+# RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi 
+# RUN rpm-ostree install ffmpeg
 
 # System76 Scheduler
 RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && rpm-ostree install system76-scheduler && systemctl enable com.system76.Scheduler.service
