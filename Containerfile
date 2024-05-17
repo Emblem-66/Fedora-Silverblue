@@ -52,7 +52,6 @@ RUN	wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/re
 # Gaming
 RUN rpm-ostree install \
 		steam steam-devices \
-		lutris \
 		bottles \
 		goverlay mangohud \
 		celluloid \
