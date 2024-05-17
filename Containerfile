@@ -23,7 +23,8 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
 	rpm-ostree install adw-gtk3-theme gnome-shell-extension-caffeine
 
 # GAMING
-RUN rpm-ostree install steam goverlay mangohud # bottles 
+#RUN rpm-ostree install steam goverlay mangohud # bottles 
+RUN sed -i '0,/enabled=0/s//enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && rpm-ostree install steam goverlay mangohud
 
 # MEDIA
 # RUN rpm-ostree override remove libavdevice-free libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg
@@ -32,6 +33,7 @@ RUN rpm-ostree install steam goverlay mangohud # bottles
 
 # FSYNC KERNEL
 RUN wget https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-$(rpm -E %fedora)/sentry-kernel-fsync-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_sentry-kernel-fsync.repo && rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:sentry:kernel-fsync kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra kernel-uki-virt kernel-headers kernel-devel
+RUN rpm-ostree install mesa-vulkan-drivers mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
 
 # System76 Scheduler
 RUN wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && rpm-ostree install system76-scheduler gnome-shell-extension-system76-scheduler && systemctl enable com.system76.Scheduler.service
