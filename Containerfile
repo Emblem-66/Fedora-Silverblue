@@ -23,8 +23,9 @@ RUN rpm-ostree override remove \
 		gnome-shell-extension-places-menu \
 		gnome-shell-extension-window-list \
 		gnome-shell-extension-background-logo \
-		gnome-classic-session \
-		gnome-classic-session-xsession
+		gnome-classic-session gnome-classic-session-xsession \
+		gnome-shell-extension-appindicator \
+		gnome-terminal gnome-terminal-nautilus
 
 RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
 	rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
@@ -41,9 +42,16 @@ RUN rpm-ostree install \
 		gnome-calculator \
 		gnome-calendar \
 		gnome-text-editor \
+		file-roller \
+		sushi \
 		loupe gthumb \
 		transmission fragments \
-		celluloid clapper g4music cozy
+		celluloid g4music cozy
+
+RUN rpm-ostree install \
+		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
+		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
+		cascadia-code-fonts rsms-inter-fonts
 
 RUN rpm-ostree install steam bottles mangohud
 
@@ -55,13 +63,6 @@ RUN rpm-ostree install system76-scheduler gnome-shell-extension-system76-schedul
 
 # RUN rpm-ostree override replace ffmpeg
 
-RUN rpm-ostree install \
-		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
-		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
-		sorkintype-merriweather-fonts sorkintype-merriweather-sans-fonts \
-		mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts \
-		levien-inconsolata-fonts jetbrains-mono-fonts cascadia-code-fonts \
-		lato-fonts rsms-inter-fonts
 
 RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
 	git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com && \
