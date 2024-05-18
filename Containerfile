@@ -51,7 +51,7 @@ RUN rpm-ostree install \
 RUN rpm-ostree install \
 		virt-manager \
 		input-remapper \
-		system76-scheduler gnome-shell-extension-system76-scheduler \
+		system76-scheduler gnome-shell-extension-system76-scheduler
 
 RUN rpm-ostree install \
 		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
