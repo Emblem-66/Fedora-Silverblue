@@ -44,6 +44,7 @@ RUN rpm-ostree install \
 		gnome-text-editor \
 		file-roller \
 		sushi \
+		evince \
 		loupe gthumb \
 		transmission fragments \
 		celluloid g4music cozy
