@@ -26,10 +26,6 @@ RUN rpm-ostree override remove \
 		gnome-classic-session \
 		gnome-classic-session-xsession
 
-RUN rpm-ostree override remove libavfilter-free libavdevice-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg && \
-	rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
-	rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld && rpm-ostree install mesa-vdpau-drivers-freeworld ;
-
 RUN rpm-ostree install \
 		distrobox gnome-tweaks \
 		gnome-console \
@@ -59,6 +55,11 @@ RUN rpm-ostree install \
 		levien-inconsolata-fonts jetbrains-mono-fonts cascadia-code-fonts 
 		lato-fonts rsms-inter-fonts
 
+RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
+	rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld && \
+	rpm-ostree install ffmpeg
+#rpm-ostree override remove libavfilter-free libavdevice-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg && \
+	
 RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
 	git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com && \
 	systemctl enable com.system76.Scheduler.service && \
