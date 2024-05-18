@@ -26,7 +26,7 @@ RUN rpm-ostree override remove \
 		gnome-classic-session \
 		gnome-classic-session-xsession
 
-RUN rpm-ostree install ffmpeg gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
+RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
 	rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
 
 RUN rpm-ostree install \
@@ -49,9 +49,11 @@ RUN rpm-ostree install steam bottles mangohud
 
 RUN rpm-ostree install virt-manager && systemctl enable libvirtd.service
 
-RUN rpm-ostree install input-remapper && systemctl enable input-remapper
+# RUN rpm-ostree install input-remapper && systemctl enable input-remapper
 
 RUN rpm-ostree install system76-scheduler gnome-shell-extension-system76-scheduler && systemctl enable com.system76.Scheduler.service
+
+# RUN rpm-ostree override replace ffmpeg
 
 RUN rpm-ostree install \
 		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
