@@ -30,28 +30,28 @@ RUN rpm-ostree install ffmpeg gstreamer1-plugin-libav gstreamer1-plugins-bad-fre
 	rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
 
 RUN rpm-ostree install \
-		distrobox gnome-tweaks \
-		gnome-console \
-		gnome-calculator \
-		gnome-calendar \
-		gnome-text-editor \
-		adw-gtk3-theme yaru-theme \
+		distrobox \
+		adw-gtk3-theme \
 		gnome-shell-extension-caffeine \
 		gnome-shell-extension-dash-to-dock
 
 RUN rpm-ostree install \
-		steam \
-		bottles \
-		lutris \
-		mangohud \
+		gnome-tweaks \
+		gnome-console \
+		gnome-calculator \
+		gnome-calendar \
+		gnome-text-editor \
+		loupe gthumb \
 		transmission fragments \
-		celluloid clapper g4music cozy \
-		epiphany chromium
+		celluloid clapper g4music cozy
 
-RUN rpm-ostree install \
-		virt-manager \
-		input-remapper \
-		system76-scheduler gnome-shell-extension-system76-scheduler
+RUN rpm-ostree install steam bottles mangohud
+
+RUN rpm-ostree install virt-manager && systemctl enable libvirtd.service
+
+RUN rpm-ostree install input-remapper && systemctl enable input-remapper
+
+RUN rpm-ostree install system76-scheduler gnome-shell-extension-system76-scheduler && systemctl enable com.system76.Scheduler.service
 
 RUN rpm-ostree install \
 		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
@@ -67,9 +67,6 @@ RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWa
 	systemctl enable flatpak-update.service && \
 	systemctl enable flatpak-update.timer && \
 	systemctl enable dconf-update.service && \
-	systemctl enable libvirtd.service && \
-	systemctl enable input-remapper && \
-	systemctl enable com.system76.Scheduler.service && \
 	sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
 	sed -i 's/#LockLayering.*/LockLayering=true/' /etc/rpm-ostreed.conf && \
 	fc-cache -f /usr/share/fonts/ && \
