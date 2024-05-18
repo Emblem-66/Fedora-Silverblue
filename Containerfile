@@ -26,42 +26,40 @@ RUN rpm-ostree override remove \
 		gnome-classic-session \
 		gnome-classic-session-xsession
 
+RUN rpm-ostree install ffmpeg gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
+	rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
+
 RUN rpm-ostree install \
 		distrobox gnome-tweaks \
 		gnome-console \
-		adw-gtk3-theme \
+		gnome-calculator \
+		gnome-calendar \
+		gnome-text-editor \
+		adw-gtk3-theme yaru-theme \
 		gnome-shell-extension-caffeine \
-		gnome-shell-extension-dash-to-dock \
-		virt-manager \
-		input-remapper \
-		system76-scheduler gnome-shell-extension-system76-scheduler \
-		yaru-theme \
+		gnome-shell-extension-dash-to-dock
+
+RUN rpm-ostree install \
 		steam \
 		bottles \
 		lutris \
 		mangohud \
 		transmission fragments \
-		cozy \
-		g4music \
-		clapper celluloid \
-		epiphany chromium \
-		gnome-calculator \
-		gnome-calendar \
-		gnome-text-editor \
+		celluloid clapper g4music cozy \
+		epiphany chromium
+
+RUN rpm-ostree install \
+		virt-manager \
+		input-remapper \
+		system76-scheduler gnome-shell-extension-system76-scheduler \
+
+RUN rpm-ostree install \
 		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
 		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
 		sorkintype-merriweather-fonts sorkintype-merriweather-sans-fonts \
 		mozilla-fira-mono-fonts mozilla-fira-sans-fonts mozilla-zilla-slab-fonts \
 		levien-inconsolata-fonts jetbrains-mono-fonts cascadia-code-fonts \
 		lato-fonts rsms-inter-fonts
-
-RUN rpm-ostree install ffmpeg gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
-	rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
-#	rpm-ostree install install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi \
-#		ffmpeg \
-#		virt-manager \
-#		input-remapper \
-#		system76-scheduler gnome-shell-extension-system76-scheduler
 
 RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
 	git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com && \
