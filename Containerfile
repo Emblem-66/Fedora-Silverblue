@@ -26,8 +26,7 @@ RUN rpm-ostree override remove \
 		gnome-classic-session gnome-classic-session-xsession \
 		gnome-terminal gnome-terminal-nautilus
 
-RUN rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free gstreamer1-plugins-ugly gstreamer1-vaapi && \
-	rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
+RUN rpm-ostree override remove mesa-va-drivers && rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
 
 RUN rpm-ostree install \
 		distrobox \
@@ -61,7 +60,7 @@ RUN rpm-ostree install virt-manager && systemctl enable libvirtd.service
 
 RUN rpm-ostree install system76-scheduler gnome-shell-extension-system76-scheduler && systemctl enable com.system76.Scheduler.service
 
-RUN rpm-ostree install ffmpeg ffmpeg-libs ffmpeg-devel gstreamer1-libav gstreamer1-plugin-openh264 gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly
+RUN rpm-ostree install ffmpeg ffmpeg-libs ffmpeg-devel gstreamer1-libav gstreamer1-plugin-openh264 gstreamer1-vaapi gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly
 
 RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
 	git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com && \
