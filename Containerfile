@@ -26,12 +26,12 @@ RUN rpm-ostree override remove \
 		gnome-classic-session \
 		gnome-classic-session-xsession
 
-RUN rpm-ostree override remove libavfilter-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg && \
+RUN rpm-ostree override remove libavfilter-free libavdevice-free libavformat-free libavcodec-free libavutil-free libpostproc-free libswresample-free libswscale-free --install=ffmpeg && \
 	rpm-ostree install gstreamer1-plugin-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-ugly gstreamer1-vaapi && \
 	rpm-ostree override remove mesa-va-drivers --install=mesa-va-drivers-freeworld && rpm-ostree install mesa-vdpau-drivers-freeworld ;
 
 RUN rpm-ostree install \
-		distrobox \
+		distrobox gnome-tweaks \
 		gnome-console \
 		adw-gtk3-theme \
 		gnome-shell-extension-caffeine \
