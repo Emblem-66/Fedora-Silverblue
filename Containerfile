@@ -17,7 +17,7 @@ RUN rm -r /usr/lib/fedora-third-party && \
 		gnome-shell-extension-window-list \
 		gnome-shell-extension-background-logo \
 		gnome-classic-session \
-gnome-classic-xsession \
+gnome-classic-session-xsession \
 		firefox firefox-langpacks
 
 # REPOS
