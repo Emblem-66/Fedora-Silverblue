@@ -12,22 +12,32 @@ FROM quay.io/fedora/fedora-silverblue:latest
 # curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo && \
 # curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo && \
 
+#RUN	curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo && \
+#	sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && \
+#	rpm-ostree install system76-scheduler gnome-shell-extension-system76-scheduler && \
+#	sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && \
+#	curl -Lo /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-$(rpm -E %fedora)/atim-heroic-games-launcher-fedora-$(rpm -E %fedora).repo && \
+#	sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo && \
+#	rpm-ostree install heroic-games-launcher-bin && \
+#	sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo && \
+#	curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo && \
+#	sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo && \
+#	rpm-ostree install fsearch && \
+#	sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo && \
+#	sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
+#	rpm-ostree install steam mangohud && \
+#	sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
+#	rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 RUN	curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo && \
 	curl -Lo /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-$(rpm -E %fedora)/atim-heroic-games-launcher-fedora-$(rpm -E %fedora).repo && \
 	curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo && \
-	sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && \
-	sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo && \
-	sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo && \
-	sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
-	rpm-ostree install system76-scheduler gnome-shell-extension-system76-scheduler && \
+	rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+	
+RUN	rpm-ostree install system76-scheduler gnome-shell-extension-system76-scheduler && \
 	rpm-ostree install heroic-games-launcher-bin && \
 	rpm-ostree install fsearch && \
-	rpm-ostree install steam mangohud && \
-	sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && \
-	sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo && \
-	sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo && \
-	sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
-	rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+	rpm-ostree install steam mangohud
 
 ### Drivers & Codecs
 RUN	rpm-ostree override remove \
