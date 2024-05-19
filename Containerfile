@@ -1,12 +1,12 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 
-### RPMFusion & COPR 
-RUN	curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo && \
-	curl -Lo /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-$(rpm -E %fedora)/atim-heroic-games-launcher-fedora-$(rpm -E %fedora).repo && \
-	curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo && \
-	rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+# RPMFusion & COPR 
+RUN	curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo \
+&&	curl -Lo /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-$(rpm -E %fedora)/atim-heroic-games-launcher-fedora-$(rpm -E %fedora).repo \
+&&	curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo \
+&&	rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-### Drivers & Codecs
+# Drivers & Codecs
 RUN	rpm-ostree override remove \
 		mesa-va-drivers \
 		noopenh264 \
@@ -18,8 +18,8 @@ RUN	rpm-ostree override remove \
 		libavutil-free \
 		libpostproc-free \
 		libswresample-free \
-		libswscale-free && \
-	rpm-ostree install \
+		libswscale-free \
+&&	rpm-ostree install \
 		mesa-va-drivers-freeworld \
 		mesa-vdpau-drivers-freeworld \
 		openh264 \
@@ -30,7 +30,7 @@ RUN	rpm-ostree override remove \
 		gstreamer1-plugins-bad-freeworld \
 		gstreamer1-plugins-ugly
 
-### Necesities
+# Necesities & Programs
 RUN	rpm-ostree install \
 		distrobox \
 		adw-gtk3-theme \
@@ -45,13 +45,8 @@ RUN	rpm-ostree install \
 		adobe-source-serif-pro-fonts \
 		adobe-source-sans-pro-fonts \
 		rsms-inter-fonts \
-		cascadia-code-fonts
-
-### Programs
-RUN	rpm-ostree install \
-		steam mangohud \
-		heroic-games-launcher-bin \
-		bottles \
+		cascadia-code-fonts \
+&&	rpm-ostree install \
 		gnome-console \
 		gnome-calculator \
 		gnome-calendar \
@@ -63,12 +58,17 @@ RUN	rpm-ostree install \
 		gthumb \
 		transmission \
 		fragments \
-		celluloid g4music cozy
+		celluloid \
+		g4music \
+		cozy
 
-### Virt-Manager
+# Gaming
+RUN	rpm-ostree install steam mangohud heroic-games-launcher-bin bottles
+
+# Virt-Manager
 RUN	rpm-ostree install virt-manager virt-install libvirt
 
-### Debloat
+# Debloat
 RUN	rpm-ostree override remove \
 		toolbox \
 		yelp yelp-xsl yelp-libs \
@@ -81,7 +81,7 @@ RUN	rpm-ostree override remove \
 		gnome-classic-session gnome-classic-session-xsession \
 		gnome-terminal gnome-terminal-nautilus
 
-### Finish
+# Finish
 COPY rootfs/ /
 RUN	fc-cache -f /usr/share/fonts/ && \
 	systemctl enable com.system76.Scheduler.service && \
