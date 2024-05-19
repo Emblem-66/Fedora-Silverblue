@@ -1,16 +1,15 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 
-COPY	rootfs/ /
+COPY rootfs/ /
 
-RUN 	rm -r /usr/lib/fedora-third-party && \
+RUN	rm -r /usr/lib/fedora-third-party && \
 	rm /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo && \
 	rm /etc/yum.repos.d/fedora-cisco-openh264.repo && \
 	rm /etc/yum.repos.d/google-chrome.repo && \
 	rm /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo && \
 	rm /etc/yum.repos.d/rpmfusion-nonfree-steam.repo && \
-	rm /etc/yum.repos.d/fedora-updates-archive.repo
-
-RUN	rpm-ostree override remove \
+	rm /etc/yum.repos.d/fedora-updates-archive.repo && \
+	rpm-ostree override remove \
 		toolbox \
 		yelp yelp-xsl yelp-libs \
 		gnome-tour \
@@ -52,22 +51,27 @@ RUN	rpm-ostree install \
 		loupe gthumb \
 		transmission fragments \
 		celluloid g4music cozy \
+		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
+		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
+		cascadia-code-fonts rsms-inter-fonts && \
+	rpm-ostree cleanup -m
+
+RUN	rpm-ostree install \
+		steam \
+		bottles \
+		heroic-games-launcher-bin \
+		mangohud && \
+	rpm-ostree cleanup -m
+
+RUN	rpm-ostree install \
 		virt-manager \
 		virt-install \
 		virt-viewer \
 		libvirt \
 		libvirt-daemon-config-network \
 		libvirt-daemon-kvm \
-		qemu-kvm \
-		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
-		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
-		cascadia-code-fonts rsms-inter-fonts
-
-RUN	rpm-ostree install \
-		steam \
-		bottles \
-		heroic-games-launcher-bin \
-		mangohud
+		qemu-kvm && \
+	rpm-ostree cleanup -m
 
 RUN	fc-cache -f /usr/share/fonts/ && \
 	git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
