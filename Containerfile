@@ -53,7 +53,6 @@ RUN	rpm-ostree override remove \
 	rpm-ostree install \
 		mesa-va-drivers-freeworld \
 		mesa-vdpau-drivers-freeworld \
-		ffmpeg \
 		openh264 \
 		mozilla-openh264 \
 		gstreamer1-libav \
