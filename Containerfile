@@ -43,6 +43,8 @@ RUN	rpm-ostree install system76-scheduler gnome-shell-extension-system76-schedul
 RUN	rpm-ostree override remove \
 		mesa-va-drivers \
 		noopenh264 \
+		ffmpeg-free \
+		libavdevice-free \
 		libavcodec-free \
 		libavfilter-free \
 		libavformat-free \
