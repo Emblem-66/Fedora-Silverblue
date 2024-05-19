@@ -25,7 +25,7 @@ RUN	rpm-ostree override remove \
 RUN	rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
 	rpm-ostree install rpmfusion-free-release rpmfusion-nonfree-release --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release && \
 	wget https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo && \
-	wget https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_atim-heroic-games-launcher-repo && \
+	wget https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo && \
 	wget https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo && \
 	wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d
 
@@ -39,6 +39,23 @@ RUN	rpm-ostree install \
 		gnome-shell-extension-dash-to-dock \
 		system76-scheduler \
 		gnome-shell-extension-system76-scheduler \
+		ffmpegthumbnailer \
+		gnome-tweaks \
+		gnome-console \
+		gnome-calculator \
+		gnome-calendar \
+		gnome-text-editor \
+		steam \
+		bottles \
+		heroic-games-launcher-bin \
+		mangohud \
+		file-roller \
+		fsearch \
+		sushi \
+		evince \
+		loupe gthumb \
+		transmission fragments \
+		celluloid g4music cozy \
 		virt-manager \
 		virt-install \
 		virt-viewer \
@@ -49,27 +66,6 @@ RUN	rpm-ostree install \
 		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
 		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
 		cascadia-code-fonts rsms-inter-fonts
-
-RUN	rpm-ostree install \
-		ffmpegthumbnailer \
-		gnome-tweaks \
-		gnome-console \
-		gnome-calculator \
-		gnome-calendar \
-		gnome-text-editor \
-		file-roller \
-		fsearch \
-		sushi \
-		evince \
-		loupe gthumb \
-		transmission fragments \
-		celluloid g4music cozy
-
-RUN	rpm-ostree install \
-		steam \
-		bottles \
-		heroic-games-launcher-bin \
-		mangohud
 
 RUN	fc-cache -f /usr/share/fonts/ && \
 	git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
