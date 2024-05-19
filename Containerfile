@@ -6,20 +6,6 @@ RUN	curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://co
 &&	curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo \
 &&	rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# Kernel Fsync
-RUN	curl -Lo /etc/yum.repos.d/_copr_sentry-kernel-fsync.repo https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-$(rpm -E %fedora)/sentry-kernel-fsync-fedora-$(rpm -E %fedora).repo \
-&&	rpm-ostree override replace \
-		--experimental \
-		--from repo=copr:copr.fedorainfracloud.org:sentry:kernel-fsync \
-		kernel \
-		kernel-core \
-		kernel-modules \
-		kernel-modules-core \
-		kernel-modules-extra \
-		kernel-uki-virt \
-		kernel-headers \
-		kernel-devel
-
 # Drivers & Codecs
 RUN	rpm-ostree override remove \
 		mesa-va-drivers \
