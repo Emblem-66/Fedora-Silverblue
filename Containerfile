@@ -45,10 +45,6 @@ RUN	rpm-ostree install \
 		gnome-calculator \
 		gnome-calendar \
 		gnome-text-editor \
-		steam \
-		bottles \
-		heroic-games-launcher-bin \
-		mangohud \
 		file-roller \
 		fsearch \
 		sushi \
@@ -66,6 +62,12 @@ RUN	rpm-ostree install \
 		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
 		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
 		cascadia-code-fonts rsms-inter-fonts
+
+RUN	rpm-ostree install \
+		steam \
+		bottles \
+		heroic-games-launcher-bin \
+		mangohud
 
 RUN	fc-cache -f /usr/share/fonts/ && \
 	git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita && \
