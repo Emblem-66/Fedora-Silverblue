@@ -63,7 +63,7 @@ RUN	rpm-ostree install \
 		cozy
 
 # Gaming
-RUN	rpm-ostree install steam mangohud heroic-games-launcher-bin bottles
+RUN	rpm-ostree install steam mangohud heroic-games-launcher-bin #bottles
 
 # Virt-Manager
 RUN	rpm-ostree install virt-manager virt-install libvirt
