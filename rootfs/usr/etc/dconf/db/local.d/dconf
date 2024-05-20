@@ -12,6 +12,7 @@ mpv-options='--sub-font="IBM Plex Sans" --sub-font-size=24'
 
 [org/gnome/TextEditor]
 show-line-numbers=true
+tab-width=uint32 4
 
 [org/gnome/desktop/app-folders]
 folder-children=['Games', 'SoundVideo', 'Sharing', 'Office', 'Graphics', 'Accessories', 'Wine']
