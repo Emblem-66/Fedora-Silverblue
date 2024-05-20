@@ -54,7 +54,6 @@ RUN	rpm-ostree install \
 		loupe \
 		gthumb \
 		transmission \
-		fragments \
 		celluloid \
 		g4music \
 		cozy \
