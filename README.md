@@ -1,25 +1,20 @@
-# Silverblue [![Silverblue](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build.yml)
+# Silverblue
 
-Custom Fedora Silverblue for usage with flatpak.
+[![Silverblue](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build.yml/badge.svg)](https://github.com/Emblem-66/Fedora-OSTree-Images/actions/workflows/build.yml)
+
+Custom Fedora Silverblue image.
 
 ``` shell
 rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ```
 ### Features
 - automatic updates
-- virt-manager
+- virt-manager, distrobox
 - flathub
-- system76-scheduler
-- input remapper
-- GNOME
-  - adw-gtk3-theme
-  - dconf
-  - extensions
-  - fonts
-### Plans
-- first run setup (install flatpaks, setup homebrew, etc)
+- GNOME tweaked
+- mesa freeworld, codecs, ffmpeg
+- steam, heroic, bottles, system76-scheduler
+
 ### References
 - [Fedora Silverblue](https://fedoraproject.org/silverblue)
-- [Virt-Manager](https://virt-manager.org)
-- [Flathub](https://flathub.org)
 - [Inspiration: uBlue](https://github.com/ublue-os)
