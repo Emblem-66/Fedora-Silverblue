@@ -76,6 +76,9 @@ use-tree-view=true
 default-folder-viewer='list-view'
 default-sort-order='name'
 
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+
 [org/gnome/portal/filechooser/com.github.geigi.cozy]
 last-folder-path='/var/home/pc/HDD1/Audiobooks'
 
