@@ -4,6 +4,7 @@ FROM quay.io/fedora/fedora-silverblue:latest
 RUN	curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo \
 &&	curl -Lo /etc/yum.repos.d/_copr_atim-heroic-games-launcher.repo https://copr.fedorainfracloud.org/coprs/atim/heroic-games-launcher/repo/fedora-$(rpm -E %fedora)/atim-heroic-games-launcher-fedora-$(rpm -E %fedora).repo \
 &&	curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo \
+&&	curl -Lo /etc/yum.repos.d/_copr_g3tchoo-prismlauncher.repo https://copr.fedorainfracloud.org/coprs/g3tchoo/prismlauncher/repo/fedora-$(rpm -E %fedora)/g3tchoo/prismlauncher-fedora-$(rpm -E %fedora).repo \
 &&	rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Drivers & Codecs
@@ -37,10 +38,14 @@ RUN	rpm-ostree install \
 		adw-gtk3-theme \
 		gnome-shell-extension-caffeine \
 		gnome-shell-extension-dash-to-dock \
-		system76-scheduler gnome-shell-extension-system76-scheduler \
+		system76-scheduler \
+		gnome-shell-extension-system76-scheduler \
 		ffmpegthumbnailer \
-		ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts \
-		adobe-source-serif-pro-fonts adobe-source-sans-pro-fonts \
+		ibm-plex-mono-fonts \
+		ibm-plex-sans-fonts \
+		ibm-plex-serif-fonts \
+		adobe-source-serif-pro-fonts \
+		adobe-source-sans-pro-fonts \
 		rsms-inter-fonts \
 		cascadia-code-fonts \
 &&	rpm-ostree install \
@@ -60,10 +65,21 @@ RUN	rpm-ostree install \
 &&	rpm-ostree cleanup -m
 
 # Gaming
-RUN	rpm-ostree install steam mangohud bottles heroic-games-launcher-bin && rpm-ostree cleanup -m
+RUN	rpm-ostree install \
+		steam \
+		mangohud \
+		bottles \
+		heroic-games-launcher-bin \
+		openmw \
+		prismlauncher \
+&&	rpm-ostree cleanup -m
 
 # Virt-Manager
-RUN	rpm-ostree install virt-manager virt-install libvirt && rpm-ostree cleanup -m
+RUN	rpm-ostree install \
+		virt-manager \
+		virt-install \
+		libvirt \
+&&	rpm-ostree cleanup -m
 
 # Debloat
 RUN	rpm-ostree override remove \
