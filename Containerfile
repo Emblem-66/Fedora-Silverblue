@@ -70,7 +70,6 @@ RUN	rpm-ostree install \
 		mangohud \
 		bottles \
 		heroic-games-launcher-bin \
-		openmw \
 		prismlauncher \
 &&	rpm-ostree cleanup -m
 
