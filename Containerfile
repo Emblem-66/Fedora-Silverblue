@@ -69,6 +69,7 @@ RUN	rpm-ostree install \
 		mangohud \
 		bottles \
 		heroic-games-launcher-bin \
+		gamescope \
 &&	rpm-ostree cleanup -m
 
 # Virt-Manager
