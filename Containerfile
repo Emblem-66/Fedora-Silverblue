@@ -17,9 +17,9 @@ RUN rpm-ostree override remove \
         mesa-vdpau-drivers-freeworld \
         libavcodec-freeworld \
 &&  rpm-ostree cleanup -m
-RUN rpm-ostree install $(< install-packages)
-RUN rpm-ostree install $(< extra-packages)
-RUN rpm-ostree override remove $(< delete-packages)
+RUN rpm-ostree install $(< /packages/install-packages)
+RUN rpm-ostree install $(< /packages/extra-packages)
+RUN rpm-ostree override remove $(< /packages/delete-packages)
 RUN fc-cache -f /usr/share/fonts/ \
 &&  systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable libvirtd.service \
@@ -27,7 +27,7 @@ RUN fc-cache -f /usr/share/fonts/ \
 &&  systemctl enable flatpak-update.service \
 &&  systemctl enable flatpak-update.timer \
 &&  systemctl enable dconf-update.service \
-&&  rm -f /packages/ \
+&&  rm -rf /packages/ \
 &&  git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita \
 &&  git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com \
 &&  wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d \
