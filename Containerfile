@@ -5,6 +5,8 @@ RUN curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://co
 &&  curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo \
 &&  rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
+RUN rpm-ostree install --force-replacefiles ffmpeg
+
 # Drivers & Codecs
 RUN rpm-ostree override remove \
         mesa-va-drivers \
