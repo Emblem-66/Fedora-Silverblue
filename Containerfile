@@ -1,12 +1,9 @@
 FROM quay.io/fedora/fedora-silverblue:latest
-
+COPY rootfs/ /
 # RPMfusion & COPR 
 RUN curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora)/kylegospo-system76-scheduler-fedora-$(rpm -E %fedora).repo \
 &&  curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora)/cboxdoerfer-fsearch-fedora-$(rpm -E %fedora).repo \
 &&  rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-RUN rpm-ostree install --force-replacefiles ffmpeg
-
 # Drivers & Codecs
 RUN rpm-ostree override remove \
         mesa-va-drivers \
@@ -16,63 +13,9 @@ RUN rpm-ostree override remove \
         mesa-vdpau-drivers-freeworld \
         libavcodec-freeworld \
 &&  rpm-ostree cleanup -m
-
-# Necesities & Programs
-RUN rpm-ostree install \
-        distrobox \
-        adw-gtk3-theme \
-        gnome-shell-extension-caffeine \
-        gnome-shell-extension-dash-to-dock \
-        system76-scheduler \
-        gnome-shell-extension-system76-scheduler \
-        ffmpegthumbnailer \
-        ibm-plex-mono-fonts \
-        ibm-plex-sans-fonts \
-        ibm-plex-serif-fonts \
-        adobe-source-serif-pro-fonts \
-        adobe-source-sans-pro-fonts \
-        rsms-inter-fonts \
-        cascadia-code-fonts \
-&&  rpm-ostree install \
-        gnome-console \
-        gnome-calculator \
-        gnome-calendar \
-        gnome-text-editor \
-        file-roller \
-        fsearch \
-        evince \
-        loupe \
-        gthumb \
-        transmission \
-        celluloid \
-        g4music \
-        cozy \
-&&  rpm-ostree cleanup -m
-
-# Virt-Manager
-RUN rpm-ostree install \
-        virt-manager \
-        virt-install \
-        libvirt \
-&&  rpm-ostree cleanup -m
-
-# Debloat
-RUN rpm-ostree override remove \
-        firefox firefox-langpacks \
-        toolbox \
-        yelp yelp-xsl yelp-libs \
-        gnome-tour \
-        gnome-shell-extension-apps-menu \
-        gnome-shell-extension-launch-new-instance \
-        gnome-shell-extension-places-menu \
-        gnome-shell-extension-window-list \
-        gnome-shell-extension-background-logo \
-        gnome-classic-session gnome-classic-session-xsession \
-        gnome-terminal gnome-terminal-nautilus \
-&&  rpm-ostree cleanup -m
-
-# Finish
-COPY rootfs/ /
+RUN rpm-ostree install -y $(< install-packages)
+RUN rpm-ostree install -y $(< delete-packages)
+RUN rpm-ostree install -y $(< extra-packages)
 RUN fc-cache -f /usr/share/fonts/ \
 &&  systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable libvirtd.service \
@@ -80,6 +23,9 @@ RUN fc-cache -f /usr/share/fonts/ \
 &&  systemctl enable flatpak-update.service \
 &&  systemctl enable flatpak-update.timer \
 &&  systemctl enable dconf-update.service \
+&&  rm /install-packages \
+&&  rm /delete-packages \
+&&  rm /extra-packages \
 &&  sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf \
 &&  sed -i 's/#LockLayering.*/LockLayering=true/' /etc/rpm-ostreed.conf \
 &&  git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita \
