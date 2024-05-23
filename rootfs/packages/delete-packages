@@ -16,3 +16,4 @@ gnome-classic-session-xsession
 gnome-session-xsession
 gnome-terminal
 gnome-terminal-nautilus
+ffmpeg-free --install=ffmpeg
