@@ -9,25 +9,10 @@ RUN curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://co
 RUN rpm-ostree override remove \
         mesa-va-drivers \
         noopenh264 \
-        ffmpeg-free \
-        libavdevice-free \
-        libavcodec-free \
-        libavfilter-free \
-        libavformat-free \
-        libavutil-free \
-        libpostproc-free \
-        libswresample-free \
-        libswscale-free \
 &&  rpm-ostree install \
         mesa-va-drivers-freeworld \
         mesa-vdpau-drivers-freeworld \
-        openh264 \
-        mozilla-openh264 \
-        gstreamer1-libav \
-        gstreamer1-plugin-openh264 \
-        gstreamer1-vaapi \
-        gstreamer1-plugins-bad-freeworld \
-        gstreamer1-plugins-ugly \
+        libavcodec-freeworld \
 &&  rpm-ostree cleanup -m
 
 # Necesities & Programs
