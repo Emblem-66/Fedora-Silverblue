@@ -1,8 +1,8 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 COPY rootfs/ /
 RUN rpm-ostree install \
-&&      https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-&&      https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
+        https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+        https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
 &&  rpm-ostree override remove \
         mesa-va-drivers \
         noopenh264 \
