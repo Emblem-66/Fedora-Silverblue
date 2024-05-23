@@ -11,10 +11,9 @@ COPY rootfs/ /
 #      mesa-vdpau-drivers-freeworld \
 #      libavcodec-freeworld \
 RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d \
-&&  rpm-ostree install ffmpeg-free \
+&&  rpm-ostree override remove $(< /packages/delete-packages) \
 &&  rpm-ostree install $(< /packages/install-packages) \
 &&  rpm-ostree install $(< /packages/extra-packages) \
-&&  rpm-ostree override remove $(< /packages/delete-packages) \
 &&  fc-cache -f /usr/share/fonts/ \
 &&  systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable libvirtd.service \
