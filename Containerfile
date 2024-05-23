@@ -13,9 +13,9 @@ RUN rpm-ostree override remove \
         mesa-vdpau-drivers-freeworld \
         libavcodec-freeworld \
 &&  rpm-ostree cleanup -m
-RUN rpm-ostree install -y $(< install-packages)
-RUN rpm-ostree install -y $(< delete-packages)
-RUN rpm-ostree install -y $(< extra-packages)
+RUN rpm-ostree install $(< install-packages)
+RUN rpm-ostree install $(< extra-packages)
+RUN rpm-ostree override remove $(< delete-packages)
 RUN fc-cache -f /usr/share/fonts/ \
 &&  systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable libvirtd.service \
