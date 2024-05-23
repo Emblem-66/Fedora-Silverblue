@@ -1,11 +1,12 @@
 FROM quay.io/fedora/fedora-silverblue:latest
-RUN rm /etc/rpm-ostreed.conf
+#RUN rm /etc/rpm-ostreed.conf
+COPY rootfs/ /
+
 # RPMfusion & COPR
 #RUN curl -Lo /etc/yum.repos.d/_copr_kylegospo-system76-scheduler.repo https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/repo/fedora-$(rpm -E %fedora) \
 #&&  curl -Lo /etc/yum.repos.d/_copr_cboxdoerfer-fsearch.repo https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch/repo/fedora-$(rpm -E %fedora) \
 #&&  rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-COPY rootfs/ /
 
 # Drivers & Codecs
 RUN rpm-ostree override remove \
