@@ -11,7 +11,7 @@ COPY rootfs/ /
 #      mesa-vdpau-drivers-freeworld \
 #      libavcodec-freeworld \
 RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d \
-&&  rpm-ostree install ffmpeg-free
+&&  rpm-ostree install ffmpeg-free \
 &&  rpm-ostree install $(< /packages/install-packages) \
 &&  rpm-ostree install $(< /packages/extra-packages) \
 &&  rpm-ostree override remove $(< /packages/delete-packages) \
