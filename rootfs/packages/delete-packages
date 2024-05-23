@@ -1,4 +1,3 @@
-noopenh264
 firefox
 firefox-langpacks
 toolbox
@@ -16,4 +15,5 @@ gnome-classic-session-xsession
 gnome-session-xsession
 gnome-terminal
 gnome-terminal-nautilus
+noopenh264 --install=openh264
 ffmpeg-free --install=ffmpeg
