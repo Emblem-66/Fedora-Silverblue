@@ -42,6 +42,9 @@ RUN rpm-ostree install \
         loupe \
         gthumb \
         transmission \
+        celluloid \
+        g4music \
+        cozy \
 &&  rpm-ostree cleanup -m
 
 # Virt-Manager
