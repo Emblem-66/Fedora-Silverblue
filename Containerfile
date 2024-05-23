@@ -12,7 +12,7 @@ COPY rootfs/ /
 #libavcodec-freeworld \
 
 
-RUN RUN <<EOT bash
+RUN RUN <<-"EOT" bash
 set -ex
 rpm-ostree install $(< /packages/install-packages)
 rpm-ostree install $(< /packages/extra-packages)
