@@ -17,3 +17,4 @@ gnome-terminal
 gnome-terminal-nautilus
 noopenh264 --install=openh264
 ffmpeg-free --install=ffmpeg
+libavcodec-free --install=libavcodec-freeworld
