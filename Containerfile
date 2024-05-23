@@ -13,7 +13,6 @@ COPY rootfs/ /
 RUN wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d \
 &&  rpm-ostree override remove $(< /packages/delete-packages) \
 &&  rpm-ostree install $(< /packages/install-packages) \
-&&  rpm-ostree install $(< /packages/extra-packages) \
 &&  fc-cache -f /usr/share/fonts/ \
 &&  systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable libvirtd.service \
