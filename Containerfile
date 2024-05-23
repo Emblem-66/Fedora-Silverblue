@@ -10,7 +10,7 @@ COPY rootfs/ /
 #        mesa-va-drivers-freeworld \
 #        mesa-vdpau-drivers-freeworld \
 #        libavcodec-freeworld \
-RUN <<-EOT
+RUN <<-EOT bash
 rpm-ostree install $(< /packages/install-packages)
 rpm-ostree install $(< /packages/extra-packages)
 rpm-ostree override remove $(< /packages/delete-packages)
