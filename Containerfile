@@ -10,10 +10,11 @@ COPY rootfs/ /
 #        mesa-va-drivers-freeworld \
 #        mesa-vdpau-drivers-freeworld \
 #        libavcodec-freeworld \
+
+#    rpm-ostree install $(< /packages/install-packages)
+#    rpm-ostree install $(< /packages/extra-packages)
+#    rpm-ostree override remove $(< /packages/delete-packages)
 RUN <<-EOT
-    rpm-ostree install $(< /packages/install-packages)
-    rpm-ostree install $(< /packages/extra-packages)
-    rpm-ostree override remove $(< /packages/delete-packages)
     fc-cache -f /usr/share/fonts/
     systemctl enable com.system76.Scheduler.service
     systemctl enable libvirtd.service
