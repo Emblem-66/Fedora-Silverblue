@@ -11,10 +11,13 @@ COPY rootfs/ /
 #        mesa-vdpau-drivers-freeworld \
 #        libavcodec-freeworld \
 
-#    rpm-ostree install $(< /packages/install-packages)
-#    rpm-ostree install $(< /packages/extra-packages)
-#    rpm-ostree override remove $(< /packages/delete-packages)
-RUN <<-EOT
+
+RUN <<-EOT bash
+	set -eu
+
+    rpm-ostree install $(< /packages/install-packages)
+    rpm-ostree install $(< /packages/extra-packages)
+    rpm-ostree override remove $(< /packages/delete-packages)
     fc-cache -f /usr/share/fonts/
     systemctl enable com.system76.Scheduler.service
     systemctl enable libvirtd.service
@@ -27,4 +30,5 @@ RUN <<-EOT
     wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d
     rpm-ostree cleanup -m
     rm -rf /tmp/* /var/* /packages/*
+
 EOT
