@@ -12,20 +12,21 @@ COPY rootfs/ /
 #libavcodec-freeworld \
 
 
-RUN <<EOF
-	rpm-ostree install $(< /packages/install-packages)
-	rpm-ostree install $(< /packages/extra-packages)
-	rpm-ostree override remove $(< /packages/delete-packages)
-	fc-cache -f /usr/share/fonts/
-	systemctl enable com.system76.Scheduler.service
-	systemctl enable libvirtd.service
-	systemctl enable rpm-ostreed-automatic.timer
-	systemctl enable flatpak-update.service
-	systemctl enable flatpak-update.timer
-	systemctl enable dconf-update.service
-	git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita
-	git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com
-	wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d
-	rpm-ostree cleanup -m
-	rm -rf /tmp/* /var/* /packages/*
-EOF
+RUN RUN <<EOT bash
+set -ex
+rpm-ostree install $(< /packages/install-packages)
+rpm-ostree install $(< /packages/extra-packages)
+rpm-ostree override remove $(< /packages/delete-packages)
+fc-cache -f /usr/share/fonts/
+systemctl enable com.system76.Scheduler.service
+systemctl enable libvirtd.service
+systemctl enable rpm-ostreed-automatic.timer
+systemctl enable flatpak-update.service
+systemctl enable flatpak-update.timer
+systemctl enable dconf-update.service
+git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita
+git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com
+wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d
+rpm-ostree cleanup -m
+rm -rf /tmp/* /var/* /packages/*
+EOT
