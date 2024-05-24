@@ -33,9 +33,6 @@ libswscale-free
 --install=mesa-va-drivers-freeworld
 --install=mesa-vdpau-drivers-freeworld
 --install=distrobox
---install=ffmpeg
---install=libavcodec-freeworld
---install=openh264
 --install=ffmpegthumbnailer
 --install=adw-gtk3-theme
 --install=gnome-shell-extension-caffeine
