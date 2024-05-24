@@ -30,8 +30,6 @@ libswscale-free
 --install=mesa-vdpau-drivers-freeworld
 --install=ffmpeg
 --install=libavcodec-freeworld
---install=mesa-va-drivers-freeworld
---install=mesa-vdpau-drivers-freeworld
 --install=distrobox
 --install=ffmpegthumbnailer
 --install=adw-gtk3-theme
