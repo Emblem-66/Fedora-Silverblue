@@ -54,7 +54,6 @@ libswscale-free
 --install=evince
 --install=loupe
 --install=gthumb
---install=transmission
 --install=celluloid
 --install=g4music
 --install=cozy
