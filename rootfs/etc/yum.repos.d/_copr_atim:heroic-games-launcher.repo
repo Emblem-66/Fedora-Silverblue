@@ -1,0 +1,10 @@
+[copr:copr.fedorainfracloud.org:atim:heroic-games-launcher]
+name=Copr repo for heroic-games-launcher owned by atim
+baseurl=https://download.copr.fedorainfracloud.org/results/atim/heroic-games-launcher/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/atim/heroic-games-launcher/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
