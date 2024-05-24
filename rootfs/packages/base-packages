@@ -28,6 +28,7 @@ libswscale-free
 --install=mozilla-openh264
 --install=mesa-va-drivers-freeworld
 --install=mesa-vdpau-drivers-freeworld
+--install=mesa-filesystem
 --install=ffmpeg
 --install=libavcodec-freeworld
 --install=distrobox
