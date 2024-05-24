@@ -15,14 +15,5 @@ gnome-classic-session-xsession
 gnome-session-xsession
 gnome-terminal
 gnome-terminal-nautilus
-noopenh264 --install=openh264
-mesa-va-drivers --install=mesa-va-drivers-freeworld --install=mesa-vdpau-drivers-freeworld
-ffmpeg-free --install=ffmpeg --install=libavcodec-freeworld
-libavcodec-free 
-libavdevice-free 
-libavfilter-free 
-libavformat-free 
-libavutil-free 
-libpostproc-free 
-libswresample-free 
-libswscale-free 
+noopenh264
+mesa-va-drivers
