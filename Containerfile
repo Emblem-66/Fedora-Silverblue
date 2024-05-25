@@ -7,7 +7,6 @@ RUN rpm-ostree install \
 #&&  rpm-ostree override remove $(< /packages/delete-packages) \
 &&  rpm-ostree override remove $(< /packages/base-packages) \
 #&&  rpm-ostree install $(< /packages/extra-packages) \
-&&  fc-cache -f /usr/share/fonts/ \
 &&  systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable libvirtd.service \
 &&  systemctl enable rpm-ostreed-automatic.timer \
