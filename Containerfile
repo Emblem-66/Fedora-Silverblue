@@ -14,7 +14,7 @@ RUN rpm-ostree install \
 &&  systemctl enable flatpak-update.service \
 &&  systemctl enable flatpak-update.timer \
 &&  systemctl enable dconf-update.service \
-&&  systemctl enable first-boot-setup.service \
+#&&  systemctl enable first-boot-setup.service \
 &&  git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita \
 &&  git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com \
 &&  chmod +x /usr/local/bin/first-boot-setup.sh \
