@@ -1,7 +1,6 @@
 FROM quay.io/fedora/fedora-silverblue:latest
 COPY rootfs/ /
-RUN chmod +x /usr/local/bin/first-boot-setup.sh \
-&&  rpm-ostree install \
+RUN rpm-ostree install \
       https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
       https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
 #&&  rpm-ostree install $(< /packages/install-packages) \
@@ -18,6 +17,6 @@ RUN chmod +x /usr/local/bin/first-boot-setup.sh \
 &&  systemctl enable first-boot-setup.service \
 &&  git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita \
 &&  git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com \
-&&  wget -q https://dl.flathub.org/repo/flathub.flatpakrepo -P /usr/etc/flatpak/remotes.d \
+&&  chmod +x /usr/local/bin/first-boot-setup.sh \
 &&  rpm-ostree cleanup -m \
 &&  rm -rf /tmp/* /var/* /packages/*
