@@ -1,5 +1,5 @@
 [Unit]
-Description=First Boot Setup: Add Flathub Repositories, Install Applications, and Apply Overrides
+Description=First Boot Setup: Add Flathub, Install Applications, Apply Overrides, fstab, drives, folders
 ConditionPathExists=!/var/lib/flatpak/.first-boot-setup-done
 After=network-online.target
 Wants=network-online.target
