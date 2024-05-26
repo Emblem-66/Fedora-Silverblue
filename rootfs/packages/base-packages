@@ -49,6 +49,7 @@ libswscale-free
 --install=gnome-calendar
 --install=gnome-text-editor
 --install=file-roller
+--install=unrar
 --install=fsearch
 --install=evince
 --install=loupe
