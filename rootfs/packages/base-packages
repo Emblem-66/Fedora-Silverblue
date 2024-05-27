@@ -44,3 +44,9 @@ ffmpeg-free
 --install=g4music
 --install=cozy
 --install=virt-manager
+--install=steam
+--install=bottles
+--install=heroic-games-launcher-bin
+--install=mangohud
+--install=goverlay
+--install=prismlauncher
