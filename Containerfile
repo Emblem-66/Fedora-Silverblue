@@ -16,7 +16,7 @@ RUN rpm-ostree override replace \
     kernel-headers \
     kernel-devel
 
-RUN rpm-ostree install steam mangohud goverlay
+RUN rpm-ostree install steam mangohud goverlay protonplus protontricks
 RUN rpm-ostree install bottles
 RUN rpm-ostree install prismlauncher
 RUN rpm-ostree install heroic-games-launcher-bin
