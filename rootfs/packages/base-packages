@@ -15,6 +15,7 @@ gnome-terminal
 gnome-terminal-nautilus
 noopenh264
 ffmpeg-free
+wine
 --install=libavcodec-freeworld
 --install=distrobox
 --install=ffmpegthumbnailer
