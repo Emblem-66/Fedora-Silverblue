@@ -8,7 +8,7 @@ RUN rpm-ostree install steam mangohud goverlay protonplus protontricks
 RUN rpm-ostree install bottles
 RUN rpm-ostree install prismlauncher
 RUN rpm-ostree install heroic-games-launcher-bin
-RUN rpm-ostree install desktopeditors
+RUN rpm-ostree install onlyoffice-desktopeditors
 RUN rpm-ostree override remove $(< /packages/base-packages)
 
 RUN systemctl enable com.system76.Scheduler.service \
