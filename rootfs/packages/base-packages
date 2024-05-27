@@ -33,10 +33,12 @@ libswscale-free
 --install=distrobox
 --install=ffmpegthumbnailer
 --install=adw-gtk3-theme
---install=gnome-shell-extension-caffeine
---install=gnome-shell-extension-dash-to-dock
 --install=system76-scheduler
 --install=gnome-shell-extension-system76-scheduler
+--install=gnome-shell-extension-caffeine
+--install=gnome-shell-extension-dash-to-dock
+--install=gnome-shell-extension-forge
+--install=gnome-shell-extension-just-perfection
 --install=ibm-plex-mono-fonts
 --install=ibm-plex-sans-fonts
 --install=ibm-plex-serif-fonts
