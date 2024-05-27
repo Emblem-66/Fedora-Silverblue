@@ -4,18 +4,6 @@ RUN rpm-ostree install \
       https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
       https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-RUN rpm-ostree override replace \
-    --experimental \
-    --from repo=copr:copr.fedorainfracloud.org:sentry:kernel-fsync \
-    kernel \
-    kernel-core \
-    kernel-modules \
-    kernel-modules-core \
-    kernel-modules-extra \
-    kernel-uki-virt \
-    kernel-headers \
-    kernel-devel
-
 RUN rpm-ostree install steam mangohud goverlay protonplus protontricks
 RUN rpm-ostree install bottles
 RUN rpm-ostree install prismlauncher
