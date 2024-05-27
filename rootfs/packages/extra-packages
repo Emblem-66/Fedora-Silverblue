@@ -1,6 +1,7 @@
-steam
-bottles
-heroic-games-launcher-bin
-mangohud
-goverlay
-prismlauncher
+wine
+--install=steam
+--install=bottles
+--install=heroic-games-launcher-bin
+--install=mangohud
+--install=goverlay
+--install=prismlauncher
