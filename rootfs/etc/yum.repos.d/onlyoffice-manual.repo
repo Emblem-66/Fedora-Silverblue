@@ -2,5 +2,5 @@
 name=onlyoffice repo
 baseurl=http://download.onlyoffice.com/repo/centos/main/noarch/
 gpgcheck=0
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ONLYOFFICE
