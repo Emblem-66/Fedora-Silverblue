@@ -2,7 +2,8 @@ FROM quay.io/fedora/fedora-silverblue:latest
 COPY rootfs/ /
 RUN rpm-ostree install \
       https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-      https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+      https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
+      https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
 
 RUN rpm-ostree install steam mangohud goverlay protonplus protontricks
 RUN rpm-ostree install bottles
