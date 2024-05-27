@@ -15,7 +15,7 @@ RUN systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable rpm-ostreed-automatic.timer \
 &&  systemctl enable flatpak-update.service \
 &&  systemctl enable flatpak-update.timer \
-&&  systemctl enable dconf-update.service \
+&&  systemctl enable dconf-update.service
 
 RUN git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita \
 &&  git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com
