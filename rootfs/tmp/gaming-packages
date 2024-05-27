@@ -1,8 +1,8 @@
-steam
-heroic-games-launcher-bin
-bottles
-prismlauncher
-goverlay
-mangohud
-protonplus
-protontricks
+--install=steam
+--install=heroic-games-launcher-bin
+--install=bottles
+--install=prismlauncher
+--install=goverlay
+--install=mangohud
+--install=protonplus
+--install=protontricks
