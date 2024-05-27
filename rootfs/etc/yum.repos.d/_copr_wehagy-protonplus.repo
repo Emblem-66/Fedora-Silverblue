@@ -1,0 +1,10 @@
+[copr:copr.fedorainfracloud.org:wehagy:protonplus]
+name=Copr repo for protonplus owned by wehagy
+baseurl=https://download.copr.fedorainfracloud.org/results/wehagy/protonplus/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/wehagy/protonplus/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
