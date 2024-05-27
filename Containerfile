@@ -6,7 +6,7 @@ RUN rpm-ostree install \
 #&&  rpm-ostree install $(< /packages/install-packages) \
 #&&  rpm-ostree override remove $(< /packages/delete-packages) \
 &&  rpm-ostree override remove $(< /packages/base-packages) \
-&&  rpm-ostree override remove $(< /packages/extra-packages) \
+#&&  rpm-ostree override remove $(< /packages/extra-packages) \
 #&&  rpm-ostree install $(< /packages/extra-packages) \
 &&  systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable libvirtd.service \
