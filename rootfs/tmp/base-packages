@@ -16,6 +16,7 @@ gnome-terminal-nautilus
 noopenh264
 mesa-va-drivers
 ffmpeg-free
+wine
 --install=mesa-va-drivers-freeworld
 --install=mesa-vdpau-drivers-freeworld
 --install=libavcodec-freeworld
