@@ -14,6 +14,7 @@ gnome-session-xsession
 gnome-terminal
 gnome-terminal-nautilus
 noopenh264
+ffmpeg-free
 --install=libavcodec-freeworld
 --install=distrobox
 --install=ffmpegthumbnailer
