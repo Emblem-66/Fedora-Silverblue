@@ -1,3 +1,4 @@
+wine
 --install=steam
 --install=heroic-games-launcher-bin
 --install=bottles
