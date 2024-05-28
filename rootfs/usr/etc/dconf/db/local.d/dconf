@@ -111,11 +111,14 @@ dock-position='BOTTOM'
 height-fraction=0.90000000000000002
 preferred-monitor=-2
 preferred-monitor-by-connector='HDMI-1'
+running-indicator-style='DOTS'
 scroll-action='cycle-windows'
 scroll-to-focused-application=true
 show-apps-always-in-the-edge=false
 show-apps-at-top=false
+show-icons-emblems=true
 show-mounts=false
+show-mounts-only-mounted=false
 show-show-apps-button=true
 show-trash=false
 
