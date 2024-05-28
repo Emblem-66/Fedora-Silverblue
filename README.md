@@ -9,7 +9,7 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 ```
 
 ### Features
-[x] automatic updates
+- [x] automatic updates
 
 [x] RPMfusion + COPR
 
