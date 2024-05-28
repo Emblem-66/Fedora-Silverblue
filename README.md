@@ -10,8 +10,11 @@ rpm-ostree rebase ostree-unverified-registry:ghcr.io/emblem-66/silverblue:latest
 
 ### Features
 [x] automatic updates
+
 [x] RPMfusion + COPR
+
 [x] mesa freeworld, codecs, ffmpeg, system76-scheduler, virt-manager, distrobox
+
 - GNOME
   [x] dconf tweaks
   [x] base apps preinstalled as rpm
