@@ -23,6 +23,7 @@ wine
 --install=distrobox
 --install=ffmpegthumbnailer
 --install=adw-gtk3-theme
+--install=morewaita-icon-theme
 --install=system76-scheduler
 --install=gnome-shell-extension-system76-scheduler
 --install=gnome-shell-extension-caffeine
