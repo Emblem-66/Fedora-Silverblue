@@ -16,3 +16,5 @@ ffmpeg-free
 --install=rsms-inter-fonts
 --install=cascadia-code-fonts
 --install=virt-manager
+--install=haruna
+--install=gwenview
