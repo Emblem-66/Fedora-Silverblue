@@ -15,6 +15,7 @@ RUN rpm-ostree cleanup -m \
 &&  systemctl enable rpm-ostreed-automatic.timer \
 &&  systemctl enable flatpak-update.service \
 &&  systemctl enable flatpak-update.timer \
+&&  systemctl disable NetworkManager-wait-online.service \
 &&  rm -rf /tmp /var
 
 
@@ -36,4 +37,5 @@ RUN rpm-ostree cleanup -m \
 #&&  systemctl enable flatpak-update.service \
 #&&  systemctl enable flatpak-update.timer \
 #&&  systemctl enable dconf-update.service \
+&&  systemctl disable NetworkManager-wait-online.service \
 #&&  rm -rf /tmp /var
