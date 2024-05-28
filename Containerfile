@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-silverblue:latest as miniblue
+FROM quay.io/fedora/fedora-silverblue:latest
 COPY rootfs/ /
 RUN rpm-ostree install \
       https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
@@ -19,5 +19,3 @@ RUN rpm-ostree cleanup -m \
 &&  git clone https://github.com/somepaulo/MoreWaita.git /usr/share/icons/MoreWaita \
 &&  git clone https://github.com/mukul29/legacy-theme-auto-switcher-gnome-extension.git /usr/share/gnome-shell/extensions/legacyschemeautoswitcher@joshimukul29.gmail.com \
 &&  rm -rf /tmp /var
-
-FROM miniblue as gamerblue
