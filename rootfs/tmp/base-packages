@@ -34,6 +34,8 @@ ffmpeg-free
 --install=adobe-source-sans-pro-fonts
 --install=rsms-inter-fonts
 --install=cascadia-code-fonts
+--install=prompt
+--install=ptyxis
 --install=gnome-console
 --install=gnome-calculator
 --install=gnome-calendar
