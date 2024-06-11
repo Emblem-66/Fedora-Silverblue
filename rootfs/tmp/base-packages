@@ -14,10 +14,7 @@ gnome-session-xsession
 gnome-terminal
 gnome-terminal-nautilus
 noopenh264
-mesa-va-drivers
 ffmpeg-free
---install=mesa-va-drivers-freeworld
---install=mesa-vdpau-drivers-freeworld
 --install=libavcodec-freeworld
 --install=distrobox
 --install=ffmpegthumbnailer
