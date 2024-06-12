@@ -11,6 +11,7 @@ RUN rpm-ostree install goverlay mangohud protonplus protontricks
 RUN rpm-ostree override remove $(< /tmp/base-packages)
 RUN rpm-ostree cleanup -m \
 &&  systemctl enable com.system76.Scheduler.service \
+&&  systemctl enable tuned \
 &&  systemctl enable rpm-ostreed-automatic.timer \
 &&  systemctl enable flatpak-update.service \
 &&  systemctl enable flatpak-update.timer \
