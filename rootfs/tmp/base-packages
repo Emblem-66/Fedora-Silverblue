@@ -45,4 +45,3 @@ ffmpeg-free
 --install=g4music
 --install=cozy
 --install=virt-manager
---install=tuned
