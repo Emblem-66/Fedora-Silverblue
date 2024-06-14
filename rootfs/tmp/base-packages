@@ -11,8 +11,6 @@ gnome-shell-extension-background-logo
 gnome-classic-session
 gnome-classic-session-xsession
 gnome-session-xsession
-gnome-terminal
-gnome-terminal-nautilus
 noopenh264
 ffmpeg-free
 --install=libavcodec-freeworld
@@ -31,7 +29,6 @@ ffmpeg-free
 --install=adobe-source-sans-pro-fonts
 --install=rsms-inter-fonts
 --install=cascadia-code-fonts
---install=gnome-console
 --install=gnome-calculator
 --install=gnome-calendar
 --install=gnome-text-editor
