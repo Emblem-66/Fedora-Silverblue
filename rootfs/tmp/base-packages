@@ -38,6 +38,7 @@ ffmpeg-free
 --install=loupe
 --install=gthumb
 --install=celluloid
+--install=clapper
 --install=g4music
 --install=cozy
 --install=virt-manager
