@@ -13,7 +13,6 @@ gnome-classic-session-xsession
 gnome-session-xsession
 noopenh264
 ffmpeg-free
---install=libavcodec-freeworld
 --install=distrobox
 --install=ffmpegthumbnailer
 --install=adw-gtk3-theme
