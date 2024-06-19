@@ -15,6 +15,8 @@ noopenh264
 ffmpeg-free
 --install=distrobox
 --install=ffmpegthumbnailer
+--install=gstreamer1-plugin-openh264
+--install=mozilla-openh264
 --install=adw-gtk3-theme
 --install=morewaita-icon-theme
 --install=system76-scheduler
