@@ -13,6 +13,9 @@ gnome-classic-session-xsession
 gnome-session-xsession
 noopenh264
 ffmpeg-free
+gnome-terminal
+gnome-terminal-nautilus
+--install=gnome-console
 --install=distrobox
 --install=ffmpegthumbnailer
 --install=gstreamer1-plugin-openh264
