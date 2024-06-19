@@ -15,7 +15,6 @@ noopenh264
 ffmpeg-free
 gnome-terminal
 gnome-terminal-nautilus
---install=gnome-console
 --install=distrobox
 --install=ffmpegthumbnailer
 --install=gstreamer1-plugin-openh264
@@ -33,6 +32,7 @@ gnome-terminal-nautilus
 --install=adobe-source-sans-pro-fonts
 --install=rsms-inter-fonts
 --install=cascadia-code-fonts
+--install=gnome-console
 --install=gnome-calculator
 --install=gnome-calendar
 --install=gnome-text-editor
