@@ -17,6 +17,9 @@ gnome-terminal
 gnome-terminal-nautilus
 --install=distrobox
 --install=ffmpegthumbnailer
+--install=libavcodec-freeworld
+--install=openh264
+--install=mozilla-openh264
 --install=gstreamer1-vaapi
 --install=gstreamer1-plugin-openh264
 --install=gstreamer1-plugins-ugly
