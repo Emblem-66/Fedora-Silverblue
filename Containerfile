@@ -9,6 +9,9 @@ RUN rpm-ostree install heroic-games-launcher-bin
 RUN rpm-ostree install bottles
 RUN rpm-ostree install prismlauncher
 RUN rpm-ostree install goverlay mangohud protonplus protontricks
+RUN wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm \
+&&  rpm-ostree install onlyoffice-desktopeditors.x86_64.rpm \
+&&  rm onlyoffice-desktopeditors.x86_64.rpm
 RUN rpm-ostree cleanup -m \
 &&  systemctl enable com.system76.Scheduler.service \
 &&  systemctl enable rpm-ostreed-automatic.timer \
