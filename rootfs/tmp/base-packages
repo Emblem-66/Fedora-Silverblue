@@ -18,6 +18,7 @@ gnome-terminal-nautilus
 --install=distrobox
 --install=ffmpegthumbnailer
 --install=gstreamer1-plugins-ugly
+--install=gstreamer1-plugins-bad-freeworld
 --install=adw-gtk3-theme
 --install=morewaita-icon-theme
 --install=system76-scheduler
