@@ -19,7 +19,7 @@ gnome-terminal-nautilus
 --install=ffmpegthumbnailer
 --install=openh264
 --install=mozilla-openh264
---install=ffmpeg
+--install=libavcodec-freeworld
 --install=gstreamer1-plugin-libav
 --install=gstreamer1-plugins-bad-free-extras
 --install=gstreamer1-plugins-bad-freeworld
