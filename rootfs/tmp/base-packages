@@ -15,6 +15,7 @@ noopenh264
 ffmpeg-free
 gnome-terminal
 gnome-terminal-nautilus
+--install=android-tools
 --install=distrobox
 --install=ffmpegthumbnailer
 --install=openh264
