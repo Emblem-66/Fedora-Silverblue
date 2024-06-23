@@ -49,6 +49,7 @@ gnome-terminal-nautilus
 --install=loupe
 --install=gthumb
 --install=clapper
+--install=celluloid
 --install=g4music
 --install=cozy
 --install=virt-manager
