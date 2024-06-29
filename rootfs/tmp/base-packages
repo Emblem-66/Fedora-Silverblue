@@ -31,9 +31,7 @@ gnome-terminal-nautilus
 --install=gnome-shell-extension-system76-scheduler
 --install=gnome-shell-extension-caffeine
 --install=gnome-shell-extension-dash-to-dock
---install=ibm-plex-mono-fonts
---install=ibm-plex-sans-fonts
---install=ibm-plex-serif-fonts
+--install=ibm-plex-fonts-all
 --install=adobe-source-serif-pro-fonts
 --install=adobe-source-sans-pro-fonts
 --install=rsms-inter-fonts
